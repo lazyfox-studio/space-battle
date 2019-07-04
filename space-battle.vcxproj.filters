@@ -5,6 +5,9 @@
     <ClCompile Include="src\Functions\Gravitation.cpp">
       <Filter>Functions</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implemenations\Actor\Actor.cpp">
+      <Filter>Implemenation\Actor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -39,6 +42,9 @@
     </Filter>
     <Filter Include="Functions">
       <UniqueIdentifier>{282529b7-c0d7-404e-b129-0c0b6de60247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implemenation\Actor">
+      <UniqueIdentifier>{aa8778fe-a884-44b8-84fd-4aebf07e9a07}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
