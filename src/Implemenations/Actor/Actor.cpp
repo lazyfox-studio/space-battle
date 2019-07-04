@@ -37,6 +37,11 @@ Actor::Actor(const Actor& temp)
     sprite = temp.sprite;
 }
 
+Actor::~Actor()
+{
+
+}
+
 double Actor::getX()
 {
     return x;
