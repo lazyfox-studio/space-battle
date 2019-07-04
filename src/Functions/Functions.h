@@ -1,6 +1,7 @@
 ﻿#pragma once
 
+#include "..//Constants.h"
 #include "..//Headers/Actor/Actor.h"
 
-//Функция собщающая телам ускорение
-void Gravitation(Actor, Actor);
+//Вычиление расстояния между Actor
+double Distance(const Actor& a, const Actor& b);

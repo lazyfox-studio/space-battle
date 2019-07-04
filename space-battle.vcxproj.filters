@@ -2,11 +2,11 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Functions\Gravitation.cpp">
-      <Filter>Functions</Filter>
-    </ClCompile>
     <ClCompile Include="src\Implemenations\Actor\Actor.cpp">
       <Filter>Implemenation\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Functions\Distance.cpp">
+      <Filter>Functions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -75,5 +75,6 @@
     <ClInclude Include="src\Functions\Functions.h">
       <Filter>Functions</Filter>
     </ClInclude>
+    <ClInclude Include="src\Constants.h" />
   </ItemGroup>
 </Project>

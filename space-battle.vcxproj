@@ -131,11 +131,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Functions\Gravitation.cpp" />
+    <ClCompile Include="src\Functions\Distance.cpp" />
     <ClCompile Include="src\Implemenations\Actor\Actor.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Constants.h" />
     <ClInclude Include="src\Functions\Functions.h" />
     <ClInclude Include="src\Headers\Actor\Actor.h" />
     <ClInclude Include="src\Headers\Actor\Pawn\Character\Character.h" />

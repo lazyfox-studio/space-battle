@@ -3,6 +3,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "..//..//Functions/Functions.h"
 #include "..//Flipbook/Flipbook.h"
 
 class Actor
@@ -11,8 +12,9 @@ class Actor
     double x;
     double y;
 
-    //Радиус тела
+    //Параметры тела
     double r;
+    double m;
 
     //Свойства тела
 
@@ -28,14 +30,20 @@ class Actor
 public:
     //Конструкторы и Деструкторы
     Actor();
-    Actor(const double x_, const double y_, const double r_, const bool attractable_, const bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_);
+    Actor(const double x_, const double y_, const double r_, const double m_, const bool attractable_, const bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_);
     Actor(const Actor& temp);
     ~Actor();
 
-    //Положение в пространстве
-    double getX();
-    double getY();
+    //Управление
+    double getX() const;
+    double getY() const;
+    double getR() const;
+    double getM() const;
+    bool isAttractable() const;
+    bool isTouchable() const;
     double setPosition(const double x_, const double y_, const sf::Vector2f velocity_ = sf::Vector2f(0, 0));
+    double addAcceleration(const sf::Vector2f acceleration_);
+    void gravitation(const Actor& temp);
 
     //Отображение
     void updateAnimation();
