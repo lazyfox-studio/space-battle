@@ -131,7 +131,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Functions\Gravitation.cpp" />
     <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Functions\Functions.h" />
+    <ClInclude Include="src\Headers\Actor\Actor.h" />
+    <ClInclude Include="src\Headers\Actor\Pawn\Character\Character.h" />
+    <ClInclude Include="src\Headers\Actor\Pawn\Pawn.h" />
+    <ClInclude Include="src\Headers\Flipbook\Flipbook.h" />
+    <ClInclude Include="src\Headers\Global\Control.h" />
+    <ClInclude Include="src\Headers\Interface\Scoreboard\Scoreboard.h" />
+    <ClInclude Include="src\Headers\Interface\Widget.h" />
+    <ClInclude Include="src\Headers\Scene\Level.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

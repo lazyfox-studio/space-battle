@@ -1,19 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Classes">
-      <UniqueIdentifier>{84542c30-0ee2-4c07-9a0d-f273e32ca4e7}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Functions\Gravitation.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Headers">
-      <UniqueIdentifier>{d89e4958-2b4d-458b-8d7a-151fe66c180f}</UniqueIdentifier>
+      <UniqueIdentifier>{5337e873-82cc-41ee-929b-82a51dcafdf0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Main">
-      <UniqueIdentifier>{65091b3e-f4d1-4f65-bc27-8c523caa4c4b}</UniqueIdentifier>
+    <Filter Include="Implemenation">
+      <UniqueIdentifier>{f4644490-40bc-4a2a-9796-276c0bed37c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Actor">
+      <UniqueIdentifier>{3ad7ad12-4cfc-4997-b6d4-2ca6fb7bcf0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Flipbook">
+      <UniqueIdentifier>{5a1d770d-839c-42ae-a571-a673d4a64bf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Global">
+      <UniqueIdentifier>{a647cb72-ab5e-4c61-884c-63c69a1246c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Interface">
+      <UniqueIdentifier>{14ec808c-73ff-4e1f-b16a-7a69e39ec720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Scene">
+      <UniqueIdentifier>{ccd2b08f-8857-40ef-9ac1-a57fade72d45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Interface\Scoreboard">
+      <UniqueIdentifier>{6298dbc5-baac-42ac-a4d4-a5c703fcb96d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Actor\Pawn">
+      <UniqueIdentifier>{4b7e39dc-c268-4cfe-911d-49deae584c4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Actor\Pawn\Character">
+      <UniqueIdentifier>{b08a535f-770d-434d-b363-847e07a13386}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Functions">
+      <UniqueIdentifier>{282529b7-c0d7-404e-b129-0c0b6de60247}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
-      <Filter>Main</Filter>
-    </ClCompile>
+    <ClInclude Include="src\Headers\Scene\Level.h">
+      <Filter>Headers\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Interface\Widget.h">
+      <Filter>Headers\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Interface\Scoreboard\Scoreboard.h">
+      <Filter>Headers\Interface\Scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Global\Control.h">
+      <Filter>Headers\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Flipbook\Flipbook.h">
+      <Filter>Headers\Flipbook</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Actor\Actor.h">
+      <Filter>Headers\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Actor\Pawn\Pawn.h">
+      <Filter>Headers\Actor\Pawn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Actor\Pawn\Character\Character.h">
+      <Filter>Headers\Actor\Pawn\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Functions\Functions.h">
+      <Filter>Functions</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
