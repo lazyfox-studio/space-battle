@@ -1,26 +1,28 @@
-﻿//Любой объект который может быть помещён на игровую локацию
-
-#pragma once
+﻿#pragma once
 
 #include <SFML/Graphics.hpp>
-#include "..//..//Functions/Functions.h"
-#include "..//Flipbook/Flipbook.h"
+#include <cmath>
+#include "../Constants.h"
+#include "../../Functions/Functions.h"
+#include "../Flipbook/Flipbook.h"
 
+// Actor (объект, который может быть помещён на игровую локацию)
 class Actor
 {
-    //Координаты
-    double x;
-    double y;
+protected:
+    // Координаты
+    float x;
+    float y;
 
-    //Параметры тела
-    double r;
-    double m;
+    // Параметры тела
+    float r;
+    float m;
 
-    //Свойства тела
+    // Свойства тела
 
-    //Физика
-    bool attractable; //Способность быть притянутым гравитацией
-    bool touchable; //Наличие реакции на столкновение(уничтожение, нанесение урона объекту столкновения)
+    // Физика
+    bool attractable; // Способность быть притянутым гравитацией
+    bool touchable;   // Наличие реакции на столкновение(уничтожение, нанесение урона объекту столкновения)
     sf::Vector2f velocity;
     sf::Vector2f acceleration;
 
@@ -30,25 +32,27 @@ class Actor
 public:
     //Конструкторы и Деструкторы
     Actor();
-    Actor(const double x_, const double y_, const double r_, const double m_, const bool attractable_, const bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_);
+    Actor(float x_, float y_, float r_, float m_, bool attractable_, bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_);
     Actor(const Actor& temp);
     ~Actor();
 
-    //Управление
-    double getX() const;
-    double getY() const;
-    double getR() const;
-    double getM() const;
+    // Аксессоры
+    float getX() const;
+    float getY() const;
+    float getR() const;
+    float getM() const;
     bool isAttractable() const;
     bool isTouchable() const;
-    double setPosition(const double x_, const double y_, const sf::Vector2f velocity_ = sf::Vector2f(0, 0));
-    double addAcceleration(const sf::Vector2f acceleration_);
+
+	// Управление
+    void setPosition(float x_, float y_, const sf::Vector2f velocity_ = sf::Vector2f(0, 0));
+    void addAcceleration(const sf::Vector2f acceleration_);
     void gravitation(const Actor& temp);
 
-    //Отображение
+    // Отображение
     void updateAnimation();
     void draw();
 
     //Действия с коллизиями
-    virtual void Collide(const Actor& agent); //Что испытает объект
+    virtual void collide(const Actor& agent); //Что испытает объект
 };

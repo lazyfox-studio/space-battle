@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "../../Headers/Actor/Actor.h"
+#include "Actor/Actor.h"
 
 Actor::Actor()
 {
@@ -15,7 +15,8 @@ Actor::Actor()
     //Что-то со спрайтом
 }
 
-Actor::Actor(const double x_, const double y_, const double r_, const double m_, const bool attractable_, const bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_)
+Actor::Actor(float x_, float y_, float r_, float m_, bool attractable_, 
+	bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_)
 {
     x = x_;
     y = y_;
@@ -45,22 +46,22 @@ Actor::~Actor()
 
 }
 
-double Actor::getX() const
+float Actor::getX() const
 {
     return x;
 }
 
-double Actor::getY() const
+float Actor::getY() const
 {
     return x;
 }
 
-double Actor::getR() const
+float Actor::getR() const
 {
     return r;
 }
 
-double Actor::getM() const
+float Actor::getM() const
 {
     return m;
 }
@@ -75,24 +76,25 @@ bool Actor::isTouchable() const
     return touchable;
 }
 
-double Actor::setPosition(const double x_, const double y_, const sf::Vector2f velocity_ = sf::Vector2f(0, 0))
+void Actor::setPosition(float x_, float y_, const sf::Vector2f velocity_)
 {
     x = x_;
     y = y_;
     velocity = velocity_;
 }
 
-double Actor::addAcceleration(const sf::Vector2f acceleration_)
+void Actor::addAcceleration(const sf::Vector2f acceleration_)
 {
     acceleration = acceleration + acceleration_;
 }
 
 void Actor::gravitation(const Actor& temp)
 {
-    if (!isAttractable) return;
-    double d = sqrt((getX() - temp.getX()) * (getX() - temp.getX()) + (getY() - temp.getY()) * (getY() - temp.getY())); //заменить на Distance
-    double f = (m * temp.m) / (d * d) * G;
-    addAcceleration(sf::Vector2f((temp.getX() - getX()) / d * f / getM(), (temp.getY() - getY()) / d * f / getM()));
+    if (!attractable) 
+		return;
+    float d = sqrt((x - temp.x) * (x - temp.x) + (y - temp.y) * (y - temp.y)); //заменить на Distance
+    float f = G * (m * temp.m) / (d * d);
+    addAcceleration(sf::Vector2f((temp.x - x) / d * f / m, (temp.y - y) / d * f / m));
 }
 
 void Actor::updateAnimation()
@@ -105,7 +107,7 @@ void Actor::draw()
 
 }
 
-void Actor::Collide(const Actor& agent)
+void Actor::collide(const Actor& agent)
 {
 
 }

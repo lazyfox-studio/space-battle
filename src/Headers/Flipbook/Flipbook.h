@@ -1,7 +1,6 @@
-﻿//Анимация
+﻿#pragma once
 
-#pragma once
-
+// Анимация
 class Flipbook
 {
 

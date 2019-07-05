@@ -1,8 +1,7 @@
-﻿//Объект которым можно управлять (NPC)
+﻿#pragma once
+#include "../Actor.h"
 
-#pragma once
-#include "..//Actor.h"
-
+// Игровая единица (управляемый объект)
 class Pawn : Actor
 {
 
