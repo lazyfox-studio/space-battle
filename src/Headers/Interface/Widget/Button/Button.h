@@ -1,11 +1,11 @@
-#pragma once
+п»ї#pragma once
 
 #include <SFML/Graphics.hpp>
 #include "Interface/Widget/Widget.h"
 
 namespace Button
 {
-	// Положение кнопки (нажата, отпущена)
+	// РџРѕР»РѕР¶РµРЅРёРµ РєРЅРѕРїРєРё (РЅР°Р¶Р°С‚Р°, РѕС‚РїСѓС‰РµРЅР°)
 	enum state
 	{
 		def,      // default
@@ -14,7 +14,7 @@ namespace Button
 		disabled
 	};
 
-	// Тип действия (надо будет убрать и использовать variadic template)
+	// РўРёРї РґРµР№СЃС‚РІРёСЏ (РЅР°РґРѕ Р±СѓРґРµС‚ СѓР±СЂР°С‚СЊ Рё РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ variadic template)
 	enum action_type
 	{
 		no,
@@ -25,7 +25,7 @@ namespace Button
 		void_this
 	};
 
-	// Набор текстур для кнопки
+	// РќР°Р±РѕСЂ С‚РµРєСЃС‚СѓСЂ РґР»СЏ РєРЅРѕРїРєРё
 	struct type
 	{
 		sf::Texture* texture[4] = { 0 };
@@ -37,7 +37,7 @@ namespace Button
 		void assignTexture(const char* def, const char* clicked = "", const char* hovered = "", const char* disabled = "");
 	};
 
-	// Пустая кнопка
+	// РџСѓСЃС‚Р°СЏ РєРЅРѕРїРєР°
 	class btn : public ::Widget
 	{
 	protected:
@@ -76,13 +76,13 @@ namespace Button
 		void click();
 	};
 
-	// Кнопка с текстом
+	// РљРЅРѕРїРєР° СЃ С‚РµРєСЃС‚РѕРј
 	class text : public btn
 	{
-		char* str;              // нужно будет сделать еще и для wchar_t
+		char* str;              // РЅСѓР¶РЅРѕ Р±СѓРґРµС‚ СЃРґРµР»Р°С‚СЊ РµС‰Рµ Рё РґР»СЏ wchar_t
 		sf::Font* btnFont;
 		sf::Text btnText;
-		sf::FloatRect bounds;   // границы текстового спрайта
+		sf::FloatRect bounds;   // РіСЂР°РЅРёС†С‹ С‚РµРєСЃС‚РѕРІРѕРіРѕ СЃРїСЂР°Р№С‚Р°
 	public:
 		text();
 		text(type*);
@@ -99,7 +99,7 @@ namespace Button
 		void drawIn(::sf::RenderWindow&);
 	};
 
-	// Кнопка с иконкой
+	// РљРЅРѕРїРєР° СЃ РёРєРѕРЅРєРѕР№
 	class icon : public btn
 	{
 		sf::Texture* iconTexture;

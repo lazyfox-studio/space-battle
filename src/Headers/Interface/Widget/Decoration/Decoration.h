@@ -1,8 +1,8 @@
-#pragma once
+п»ї#pragma once
 
 #include "../Widget.h"
 
-// Декорация (элементы оформления)
+// Р”РµРєРѕСЂР°С†РёСЏ (СЌР»РµРјРµРЅС‚С‹ РѕС„РѕСЂРјР»РµРЅРёСЏ)
 class Decoration : Widget
 {
 
