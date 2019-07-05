@@ -1,3 +1,3 @@
 #pragma once
 
-#define G 1.0;
+constexpr auto G = 1.0f;

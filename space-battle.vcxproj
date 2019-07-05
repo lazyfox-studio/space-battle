@@ -91,12 +91,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\Source\SFML-2.5.1 x64\include;D:\SFML-2.5.1-x64\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\Headers;D:\SFML-2.5.1-x64\include;E:\Source\SFML-2.5.1 x64\include;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>E:\Source\SFML-2.5.1 x64\lib;D:\SFML-2.5.1-x64\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\Source\SFML-2.5.1 x64\lib;D:\SFML-2.5.1-x64\lib;</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-graphics-s-d.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-audio-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -132,7 +132,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Functions\Distance.cpp" />
-    <ClCompile Include="src\Implemenations\Actor\Actor.cpp" />
+    <ClCompile Include="src\Implementation\Actor\Actor.cpp" />
+    <ClCompile Include="src\Implementation\Interface\Widget\Button\Button.cpp" />
+    <ClCompile Include="src\Implementation\Interface\Widget\Scoreboard\Scoreboard.cpp" />
+    <ClCompile Include="src\Implementation\Interface\Widget\Widget.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -143,8 +146,10 @@
     <ClInclude Include="src\Headers\Actor\Pawn\Pawn.h" />
     <ClInclude Include="src\Headers\Flipbook\Flipbook.h" />
     <ClInclude Include="src\Headers\Global\Control.h" />
-    <ClInclude Include="src\Headers\Interface\Scoreboard\Scoreboard.h" />
-    <ClInclude Include="src\Headers\Interface\Widget.h" />
+    <ClInclude Include="src\Headers\Interface\Widget\Button\Button.h" />
+    <ClInclude Include="src\Headers\Interface\Widget\Decoration\Decoration.h" />
+    <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h" />
+    <ClInclude Include="src\Headers\Interface\Widget\Widget.h" />
     <ClInclude Include="src\Headers\Scene\Level.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
