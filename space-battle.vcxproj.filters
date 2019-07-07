@@ -87,9 +87,6 @@
     <ClInclude Include="src\Headers\Scene\Level.h">
       <Filter>Headers\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="src\Headers\Global\Control.h">
-      <Filter>Headers\Global</Filter>
-    </ClInclude>
     <ClInclude Include="src\Headers\Flipbook\Flipbook.h">
       <Filter>Headers\Flipbook</Filter>
     </ClInclude>
@@ -123,6 +120,12 @@
     </ClInclude>
     <ClInclude Include="src\Tables\TextureTableDictionary.h">
       <Filter>Tables</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Global\InputControl.h">
+      <Filter>Headers\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Global\WindowControl.h">
+      <Filter>Headers\Global</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

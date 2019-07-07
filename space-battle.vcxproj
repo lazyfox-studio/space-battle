@@ -145,7 +145,8 @@
     <ClInclude Include="src\Headers\Actor\Pawn\Character\Character.h" />
     <ClInclude Include="src\Headers\Actor\Pawn\Pawn.h" />
     <ClInclude Include="src\Headers\Flipbook\Flipbook.h" />
-    <ClInclude Include="src\Headers\Global\Control.h" />
+    <ClInclude Include="src\Headers\Global\InputControl.h" />
+    <ClInclude Include="src\Headers\Global\WindowControl.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Button\Button.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Decoration\Decoration.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h" />
