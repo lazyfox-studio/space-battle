@@ -1,5 +1,8 @@
 ﻿#pragma once
 
+#include "../Tables/TextureTableDictionary.h"
+#include "../Tables/TextureTable.h"
+
 // Анимация
 class Flipbook
 {
@@ -17,10 +20,10 @@ public:
     //Конструкторы
     Flipbook();
     Flipbook(const Flipbook& temp);
-    //Flipbook(TextureTableIndex index_);
+    Flipbook(TextureTableDictionary index_);
 
     //Обновление текстуры
-    //void assign(TextureTableIndex index_);
+    void assign(TextureTableDictionary index_);
 
     //Управление анимацией
     void frameNext(); //Следущий кадр

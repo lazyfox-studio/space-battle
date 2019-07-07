@@ -5,17 +5,17 @@
     <ClCompile Include="src\Functions\Distance.cpp">
       <Filter>Functions</Filter>
     </ClCompile>
-    <ClCompile Include="src\Implementation\Interface\Widget\Widget.cpp">
-      <Filter>Implementation\Interface\Widget</Filter>
+    <ClCompile Include="src\Implementations\Actor\Actor.cpp">
+      <Filter>Implementations\Actor</Filter>
     </ClCompile>
-    <ClCompile Include="src\Implementation\Interface\Widget\Button\Button.cpp">
-      <Filter>Implementation\Interface\Widget\Button</Filter>
+    <ClCompile Include="src\Implementations\Interface\Widget\Widget.cpp">
+      <Filter>Implementations\Interface</Filter>
     </ClCompile>
-    <ClCompile Include="src\Implementation\Interface\Widget\Scoreboard\Scoreboard.cpp">
-      <Filter>Implementation\Interface\Widget\Scoreboard</Filter>
+    <ClCompile Include="src\Implementations\Interface\Widget\Button\Button.cpp">
+      <Filter>Implementations\Interface\Widget\Button</Filter>
     </ClCompile>
-    <ClCompile Include="src\Implementation\Actor\Actor.cpp">
-      <Filter>Implementation\Actor</Filter>
+    <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp">
+      <Filter>Implementations\Interface\Widget\Scoreboard</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -46,12 +46,6 @@
     <Filter Include="Functions">
       <UniqueIdentifier>{282529b7-c0d7-404e-b129-0c0b6de60247}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Implementation">
-      <UniqueIdentifier>{f4644490-40bc-4a2a-9796-276c0bed37c5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Implementation\Actor">
-      <UniqueIdentifier>{aa8778fe-a884-44b8-84fd-4aebf07e9a07}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Headers\Interface\Widget">
       <UniqueIdentifier>{0bca5e3c-16b0-4967-827f-41e3978d9c0d}</UniqueIdentifier>
     </Filter>
@@ -64,17 +58,29 @@
     <Filter Include="Headers\Interface\Widget\Decoration">
       <UniqueIdentifier>{062126d3-e91e-4c33-80bb-c455dc4c97e1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Implementation\Interface">
+    <Filter Include="Implementations">
+      <UniqueIdentifier>{f4644490-40bc-4a2a-9796-276c0bed37c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Actor">
+      <UniqueIdentifier>{aa8778fe-a884-44b8-84fd-4aebf07e9a07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Interface">
       <UniqueIdentifier>{72e50ccf-4fc0-4a5f-b9b8-b3956988a574}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Implementation\Interface\Widget">
+    <Filter Include="Implementations\Interface\Widget">
       <UniqueIdentifier>{0649c72a-a3c3-4e90-aa3d-a650907268b8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Implementation\Interface\Widget\Button">
+    <Filter Include="Implementations\Interface\Widget\Button">
       <UniqueIdentifier>{1b0a5bb8-a98d-423c-8ebb-3c93d3c79ca6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Implementation\Interface\Widget\Scoreboard">
+    <Filter Include="Implementations\Interface\Widget\Scoreboard">
       <UniqueIdentifier>{1bd3b7b0-2880-4842-a4ec-80a7637cc706}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Global">
+      <UniqueIdentifier>{69279459-60a2-4219-bd91-dc4c1392eece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tables">
+      <UniqueIdentifier>{bb58efc0-abcd-4e75-ae56-a380f01235c0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +117,12 @@
     </ClInclude>
     <ClInclude Include="src\Functions\Functions.h">
       <Filter>Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tables\TextureTable.h">
+      <Filter>Tables</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tables\TextureTableDictionary.h">
+      <Filter>Tables</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
