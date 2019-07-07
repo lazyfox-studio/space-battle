@@ -3,7 +3,7 @@
 
 #include "../Actor/Pawn/Character/Character.h"
 
-class Control
+class InputControl
 {
     Character* slave;
     

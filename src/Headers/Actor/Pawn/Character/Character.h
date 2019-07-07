@@ -1,9 +1,9 @@
 ﻿#pragma once
 #include "../Pawn.h"
-#include "../../../Global/Control.h"
+#include "../../../Global/InputControl.h"
 
 // Персонаж (управляемый игроком объект)
 class Character : Pawn
 {
-    friend class Control;
+    friend class InputControl;
 };
