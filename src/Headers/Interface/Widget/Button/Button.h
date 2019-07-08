@@ -1,5 +1,5 @@
 ﻿#pragma once
-/*
+
 #include <SFML/Graphics.hpp>
 #include "Interface/Widget/Widget.h"
 #include "Flipbook/Flipbook.h"
@@ -17,41 +17,25 @@ namespace Button
 		disabled
 	};
 
-	// Тип действия (надо будет убрать и использовать variadic template)
-	enum action_type
-	{
-		no,
-		void_void,
-		void_arg,
-		void_ref,
-		void_ptr,
-		void_this
-	};
-
-
 	// Пустая кнопка
 	class base : public ::Widget
 	{
 	protected:
+		typedef TextureTableDictionary TTD;
 		state btnState;
-		void (*a_void_void)();
-		void (*a_void_ptr)(void*);
-		action_type atype;
-		void* a_subject;
-
-		Flipbook sprite;
-		std::array<TextureTableDictionary, 4> textureIndexes;
+		Flipbook btn;
+		std::array<TTD, 4> textureIndexes;
 
 	public:
 		base();
-		base();
+		base(std::initializer_list<TTD> textureIndexes_);
 		virtual ~base();
 
 		state getState();
 		state checkState(float mouse_x, float mouse_y, bool mouse_click, bool set_state = false);
-		virtual void setState(state);
-		virtual void setPosition(float, float) = 0;
-		virtual void drawIn(sf::RenderWindow&) = 0;
+		virtual void setState(state state_);
+		virtual void setPosition(sf::Vector2f position) = 0;
+		virtual void drawIn(sf::RenderWindow& window) = 0;
 
 		void onClick(void(*func)());
 		void onClick(void(*func)(void*), void*);
@@ -62,39 +46,36 @@ namespace Button
 	};
 
 	// Кнопка с текстом
-	class text : public btn
+	class text : public base
 	{
-		char* str;              // нужно будет сделать еще и для wchar_t
+		std::string str;
 		sf::Font* btnFont;
 		sf::Text btnText;
 		sf::FloatRect bounds;   // границы текстового спрайта
 	public:
 		text();
-		text(const char*);
+		explicit text(const std::string& str_);
 		~text();
 
-		void setText(const char*);
-		void setColor(sf::Color);
-		void setSize(unsigned);
-		void assignFont(sf::Font*);
-		void setState(state);
-		void setPosition(float, float);
-		void setWidth(int);
-		void drawIn(::sf::RenderWindow&);
+		void setText(const std::string& str_);
+		void setColor(sf::Color color);
+		void setSize(unsigned size);
+		void assignFont(sf::Font* font_);
+		void setPosition(sf::Vector2f position);
+		void setWidth(int width);
+		void drawIn(::sf::RenderWindow& window);
 	};
 
 	// Кнопка с иконкой
-	class icon : public btn
+	class icon : public base
 	{
-		sf::Texture* iconTexture;
-		sf::Sprite iconSprite;
+		Flipbook iconSprite;
 	public:
 		icon();
 		~icon();
 
-		void assignIcon(const char*);
-		void setState(state);
-		void setPosition(float, float);
-		void drawIn(sf::RenderWindow&);
+		void assignIcon(TTD index);
+		void setPosition(sf::Vector2f position);
+		void drawIn(sf::RenderWindow& window);
 	};
-}*/
+}

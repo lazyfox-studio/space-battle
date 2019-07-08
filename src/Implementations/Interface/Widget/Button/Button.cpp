@@ -1,12 +1,21 @@
 ﻿#include "Interface/Widget/Button/Button.h"
-/*
+
 Button::base::base() : Widget()
 {
+	textureIndexes = { TTD::TextureEmpty, TTD::TextureEmpty, TTD::TextureEmpty, TTD::TextureEmpty };
 	x = y = 0.f;
 	btnState = state::def;
-	a_void_void = nullptr;
-	a_void_ptr = nullptr;
-	atype = action_type::no;
+	setState(state::def);
+}
+
+Button::base::base(std::initializer_list<TTD> textureIndexes_) : base()
+{
+	if (textureIndexes_.size() < 1)
+		return;
+	int i = 0;
+	for (auto index : textureIndexes_)
+		textureIndexes[i++] = index;
+	setState(state::def);
 }
 
 Button::base::~base()
@@ -22,13 +31,13 @@ Button::state Button::base::getState()
 Button::state Button::base::checkState(float mouse_x, float mouse_y, bool mouse_click, bool _set_state)
 {
 	state _state = state::def;
-	if (!visible)
+	if (!btn.visible())
 		_state = state::def;
 	else
 	{
 		if (btnState == state::disabled)
 			_state = state::disabled;
-		if ((mouse_x >= x) && (mouse_x <= x + width) && (mouse_y >= y) && (mouse_y <= y + height))
+		if ((mouse_x >= x) && (mouse_x <= x + btn.width()) && (mouse_y >= y) && (mouse_y <= y + btn.height()))
 		{
 			if (mouse_click)
 			{
@@ -44,88 +53,54 @@ Button::state Button::base::checkState(float mouse_x, float mouse_y, bool mouse_
 	return _state;
 }
 
-void Button::base::setState(state _state)
+void Button::base::setState(state state_)
 {
-	btnState = _state;
-	if (prototype->stateExists[btnState])
-		sprite.setTexture(*(prototype->texture[btnState]));
+	btnState = state_;
+	if (textureIndexes[btnState] != TTD::TextureEmpty)
+		btn.assignTexture(textureIndexes[btnState]);
 	else
-		sprite.setTexture(*(prototype->texture[state::def]));
+		btn.assignTexture(textureIndexes[state::def]);
 }
 
 void Button::base::onClick(void(*func)())
 {
-	a_void_void = func;
-	atype = action_type::void_void;
+	
 }
 
 void Button::base::onClick(void(*func)(void*), void* ptr)
 {
-	a_void_ptr = func;
-	atype = action_type::void_ptr;
-	a_subject = ptr;
+	
 }
 
 void Button::base::click()
 {
-	switch (atype)
-	{
-	case action_type::void_void:
-		if (a_void_void)
-			(*a_void_void)();
-		break;
-	case action_type::void_ptr:
-		if (a_void_ptr)
-			(*a_void_ptr)(a_subject);
-		break;
-	}
+	
 }
 
 Button::text::text() : base()
 {
-	str = nullptr;
 	btnText.setOrigin(0.f, 0.f);
 	bounds = btnText.getGlobalBounds();
 }
 
-Button::text::text(type* p) : btn(p)
+Button::text::text(const std::string& str_) : base()
 {
-	setState(state::def);
-	str = nullptr;
-	btnText.setOrigin(0.f, 0.f);
-	setWidth(p->width);
-	bounds = btnText.getGlobalBounds();
-}
-
-Button::text::text(type* p, const char* _str) : btn(p)
-{
-	setState(state::def);
-	str = nullptr;
-	setText(_str);
-	setWidth(p->width);
+	str = str_;
+	setText(str_.c_str());
 }
 
 Button::text::~text()
 {
-	if (str)
-		delete[] str;
-	// ~base();
+	
 }
 
-void Button::text::setText(const char* _str)
+void Button::text::setText(const std::string& str_)
 {
-	if (str)
-		delete[] str;
-	int len = 0;
-	for (; _str[len]; len++);
-	str = new char[len + 1];
-	for (int i = 0; i < len; i++)
-		str[i] = _str[i];
-	str[len] = 0;
-	btnText.setString(str);
+	str = str_;
+	btnText.setString(str.c_str());
 	bounds = btnText.getGlobalBounds();
 	btnText.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
-	btnText.setPosition(x + width / 2.f, y + height / 2.f);
+	btnText.setPosition(x + btn.width() / 2.f, y + btn.height() / 2.f);
 	bounds = btnText.getGlobalBounds();
 }
 
@@ -146,91 +121,63 @@ void Button::text::assignFont(sf::Font* font)
 	btnText.setFont(*btnFont);
 }
 
-void Button::text::setState(state _state)
-{
-	btnState = _state;
-	if (prototype->stateExists[btnState])
-		sprite.setTexture(*(prototype->texture[btnState]));
-	else
-		sprite.setTexture(*(prototype->texture[state::def]));
-}
 
-void Button::text::setPosition(float _x, float _y)
+void Button::text::setPosition(sf::Vector2f position)
 {
-	bounds.left = _x + (bounds.left - x);
-	bounds.top = _y + (bounds.top - y);
-	float shift_x = width / 2.f, shift_y = height / 2.f;
-	x = _x;
-	y = _y;
-	sprite.setPosition(x, y);
+	bounds.left = x + (bounds.left - x);
+	bounds.top = y + (bounds.top - y);
+	float shift_x = btn.width() / 2.f, shift_y = btn.height() / 2.f;
+	x = position.x;
+	y = position.y;
+	btn.setPosition(sf::Vector2f(x, y));
 	btnText.setPosition(x + shift_x, y + shift_y);
 }
 
-void Button::text::setWidth(int _width)
+void Button::text::setWidth(int width)
 {
-	if (_width <= 0)
+	if (width <= 0)
 		return;
-	float factor = float(_width) / float(width);
-	sprite.setScale(factor, factor);
-	btnText.setScale(factor, factor);
-	width = _width;
-	height = (int)(height * factor);
+	float factor = float(width) / btn.width();
+	btn.scale(factor);
+	btnText.setScale(sf::Vector2f(factor, factor));
 }
 
 void Button::text::drawIn(sf::RenderWindow& window)
 {
-	if (!visible)
+	if (!btn.visible())
 		return;
-	window.draw(sprite);
+	btn.drawIn(window);
 	window.draw(btnText);
 }
 
 Button::icon::icon() : base()
 {
-	iconTexture = new sf::Texture;
-}
-
-Button::icon::icon(type* p) : btn(p)
-{
-	setState(state::def);
-	iconTexture = new sf::Texture;
+	
 }
 
 Button::icon::~icon()
 {
-	delete iconTexture;
-	// ~base();
+	
 }
 
-void Button::icon::assignIcon(const char* file)
+void Button::icon::assignIcon(TTD index)
 {
-	iconTexture->loadFromFile(file);
-	iconTexture->setSmooth(true);
-	iconSprite.setTexture(*iconTexture);
+	iconSprite.assignTexture(index);
 }
 
-void Button::icon::setState(state _state)
-{
-	btnState = _state;
-	if (prototype->stateExists[btnState])
-		sprite.setTexture(*(prototype->texture[btnState]));
-	else
-		sprite.setTexture(*(prototype->texture[state::def]));
-}
 
-void Button::icon::setPosition(float _x, float _y)
+void Button::icon::setPosition(sf::Vector2f position)
 {
-	x = _x;
-	y = _y;
-	sprite.setPosition(x, y);
-	iconSprite.setPosition(x, y);
+	x = position.x;
+	y = position.y;
+	btn.setPosition(position);
+	iconSprite.setPosition(position);
 }
 
 void Button::icon::drawIn(sf::RenderWindow& window)
 {
-	if (!visible)
+	if (!btn.visible())
 		return;
-	window.draw(sprite);
-	window.draw(iconSprite);
+	btn.drawIn(window);
+	iconSprite.drawIn(window);
 }
-*/
