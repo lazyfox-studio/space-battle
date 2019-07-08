@@ -17,6 +17,9 @@
     <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp">
       <Filter>Implementations\Interface\Widget\Scoreboard</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp">
+      <Filter>Implementations\Flipbook</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -79,7 +82,10 @@
     <Filter Include="Implementations\Global">
       <UniqueIdentifier>{69279459-60a2-4219-bd91-dc4c1392eece}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Tables">
+    <Filter Include="Implementations\Flipbook">
+      <UniqueIdentifier>{602ca474-4e4a-4fa6-88ea-83419cc85cae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Tables">
       <UniqueIdentifier>{bb58efc0-abcd-4e75-ae56-a380f01235c0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -115,12 +121,6 @@
     <ClInclude Include="src\Functions\Functions.h">
       <Filter>Functions</Filter>
     </ClInclude>
-    <ClInclude Include="src\Tables\TextureTable.h">
-      <Filter>Tables</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Tables\TextureTableDictionary.h">
-      <Filter>Tables</Filter>
-    </ClInclude>
     <ClInclude Include="src\Headers\Global\InputControl.h">
       <Filter>Headers\Global</Filter>
     </ClInclude>
@@ -132,6 +132,12 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Global\WindowCorners.h">
       <Filter>Headers\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Tables\TextureTable.h">
+      <Filter>Headers\Tables</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Tables\TextureTableDictionary.h">
+      <Filter>Headers\Tables</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

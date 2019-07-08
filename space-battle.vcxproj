@@ -133,6 +133,7 @@
   <ItemGroup>
     <ClCompile Include="src\Functions\Distance.cpp" />
     <ClCompile Include="src\Implementations\Actor\Actor.cpp" />
+    <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Button\Button.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Widget.cpp" />
@@ -154,8 +155,8 @@
     <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Widget.h" />
     <ClInclude Include="src\Headers\Scene\Level.h" />
-    <ClInclude Include="src\Tables\TextureTable.h" />
-    <ClInclude Include="src\Tables\TextureTableDictionary.h" />
+    <ClInclude Include="src\Headers\Tables\TextureTable.h" />
+    <ClInclude Include="src\Headers\Tables\TextureTableDictionary.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

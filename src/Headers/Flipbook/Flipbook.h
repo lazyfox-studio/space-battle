@@ -17,7 +17,7 @@ protected:
     //Можно сделать поля для работы с эффектами
 
 public:
-    //Конструкторы
+    //Конструкторы (todo)
     Flipbook();
     Flipbook(const Flipbook& temp);
     Flipbook(TextureTableDictionary index_);
