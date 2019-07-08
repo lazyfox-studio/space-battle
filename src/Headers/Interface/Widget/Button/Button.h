@@ -8,6 +8,20 @@
 
 namespace Button
 {
+	// Общий вариативный функтор-обработчик
+	template<typename ...Types> 
+	struct eventHandler {};
+
+	// Специализация функтора для пакетного синтаксиса handler<RT(T1, T2, ...)>
+	template<typename RType, typename ...ATypes>
+	struct eventHandler<RType(ATypes...)>
+	{
+		typename RType(*FT)(ATypes...);
+		FT handleFunc;
+		eventHandler(FT handleFunc_) : handleFunc(handleFunc_) {};
+		RType operator()(ATypes... args) { return handleFunc(args...); }
+	};
+
 	// Положение кнопки (нажата, отпущена)
 	enum state
 	{
@@ -18,7 +32,7 @@ namespace Button
 	};
 
 	// Пустая кнопка
-	class base : public ::Widget
+	class base : ::Widget
 	{
 	protected:
 		typedef TextureTableDictionary TTD;
@@ -36,9 +50,6 @@ namespace Button
 		virtual void setState(state state_);
 		virtual void setPosition(sf::Vector2f position) = 0;
 		virtual void drawIn(sf::RenderWindow& window) = 0;
-
-		void onClick(void(*func)());
-		void onClick(void(*func)(void*), void*);
 		void click();
 
 		void makeVisible();
@@ -46,7 +57,8 @@ namespace Button
 	};
 
 	// Кнопка с текстом
-	class text : public base
+	template <typename FT>
+	class text : base
 	{
 		std::string str;
 		sf::Font* btnFont;
