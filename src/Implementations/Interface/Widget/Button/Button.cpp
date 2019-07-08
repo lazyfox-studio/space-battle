@@ -62,9 +62,18 @@ void Button::base::setState(state state_)
 		btn.assignTexture(textureIndexes[state::def]);
 }
 
+void Button::base::onClick(EventHandler handler_, EventHadlerParam handlerParam_)
+{
+	handler = handler_;
+	handlerParam = handlerParam_;
+}
+
 void Button::base::click()
 {
-	
+	if (handlerParam)        // если задан handlerParam, вызываем handler с ним
+		(*handler)(handlerParam);  
+	else        // иначе приводим к void(*)() и вызываем handler без параметров
+		((void(*)())(*handler))(); 
 }
 
 Button::text::text() : base()

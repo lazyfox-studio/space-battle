@@ -9,18 +9,18 @@
 namespace Button
 {
 	// Общий вариативный функтор-обработчик
-	template<typename ...Types> 
-	struct eventHandler {};
+	/*template<typename ...Types> 
+	struct eventHandler {};*/
 
 	// Специализация функтора для пакетного синтаксиса handler<RT(T1, T2, ...)>
-	template<typename RType, typename ...ATypes>
+	/*template<typename RType, typename ...ATypes>
 	struct eventHandler<RType(ATypes...)>
 	{
 		typename RType(*FT)(ATypes...);
 		FT handleFunc;
 		eventHandler(FT handleFunc_) : handleFunc(handleFunc_) {};
 		RType operator()(ATypes... args) { return handleFunc(args...); }
-	};
+	};*/
 
 	// Положение кнопки (нажата, отпущена)
 	enum state
@@ -32,13 +32,17 @@ namespace Button
 	};
 
 	// Пустая кнопка
-	class base : ::Widget
+	class base : public ::Widget
 	{
 	protected:
 		typedef TextureTableDictionary TTD;
+		typedef void* EventHadlerParam;
+		typedef void(*EventHandler)(EventHadlerParam);
 		state btnState;
 		Flipbook btn;
 		std::array<TTD, 4> textureIndexes;
+		EventHandler handler;
+		EventHadlerParam handlerParam;
 
 	public:
 		base();
@@ -50,6 +54,7 @@ namespace Button
 		virtual void setState(state state_);
 		virtual void setPosition(sf::Vector2f position) = 0;
 		virtual void drawIn(sf::RenderWindow& window) = 0;
+		void onClick(EventHandler handler_, EventHadlerParam handlerParam_ = nullptr);
 		void click();
 
 		void makeVisible();
