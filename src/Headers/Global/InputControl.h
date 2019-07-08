@@ -1,8 +1,8 @@
-﻿//Класс управления, привязывается к Character'у
-#pragma once
+﻿#pragma once
 
-#include "../Actor/Pawn/Character/Character.h"
+#include "Actor/Pawn/Character/Character.h"
 
+// Контроллер управления персонажем (привязывается к Charachter)
 class InputControl
 {
     Character* slave;

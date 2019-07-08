@@ -76,6 +76,11 @@ bool Actor::isTouchable() const
     return touchable;
 }
 
+float Actor::distance(const Actor& temp) const
+{
+	return sqrt((x - temp.x) * (x - temp.x) + (y - temp.y) * (y - temp.y));
+}
+
 void Actor::setPosition(float x_, float y_, const sf::Vector2f velocity_)
 {
     x = x_;
@@ -92,7 +97,7 @@ void Actor::gravitation(const Actor& temp)
 {
     if (!attractable) 
 		return;
-    float d = sqrt((x - temp.x) * (x - temp.x) + (y - temp.y) * (y - temp.y)); //заменить на Distance
+    float d = distance(temp);
     float f = G * (m * temp.m) / (d * d);
     addAcceleration(sf::Vector2f((temp.x - x) / d * f / m, (temp.y - y) / d * f / m));
 }
@@ -102,7 +107,7 @@ void Actor::updateAnimation()
 
 }
 
-void Actor::draw()
+void Actor::drawIn(sf::RenderWindow& window)
 {
 
 }

@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include <SFML/Graphics.hpp>
+#include "Global/WindowControl.h"
 
 // Виджет (элемент графического интерфейса)
 class Widget
@@ -10,14 +11,14 @@ protected:
 	float x;
 	float y;
 
+	// Указатель на окно (для отслеживания углов)
+	WindowControl::screenCorners* corners;
 public:
+	// Конструкторы и деструктор
+	Widget();
+	Widget(const Widget& temp);
+	Widget(sf::Sprite&);
+	~Widget();
 
-	// Координаты угловых точек окна (общие для всех объектов)
-	struct screenCorners
-	{
-		static sf::Vector2f topLeft;
-		static sf::Vector2f topRight;
-		static sf::Vector2f bottomLeft;
-		static sf::Vector2f bottomRight;
-	};
+	virtual void drawIn(sf::RenderWindow& window);
 };

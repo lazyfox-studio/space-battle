@@ -3,7 +3,6 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>
 #include "../Constants.h"
-#include "../../Functions/Functions.h"
 #include "../Flipbook/Flipbook.h"
 
 // Actor (объект, который может быть помещён на игровую локацию)
@@ -15,8 +14,8 @@ protected:
     float y;
 
     // Параметры тела
-    float r;
-    float m;
+    float r; // Радиус вписывающей окружности
+    float m; // Масса
 
     // Свойства тела
 
@@ -43,6 +42,7 @@ public:
     float getM() const;
     bool isAttractable() const;
     bool isTouchable() const;
+	float distance(const Actor& temp) const;
 
 	// Управление
     void setPosition(float x_, float y_, const sf::Vector2f velocity_ = sf::Vector2f(0, 0));
@@ -51,7 +51,7 @@ public:
 
     // Отображение
     void updateAnimation();
-    void draw();
+    void drawIn(sf::RenderWindow& window);
 
     //Действия с коллизиями
     virtual void collide(const Actor& agent); //Что испытает объект
