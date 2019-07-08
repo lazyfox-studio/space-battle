@@ -1,37 +1,40 @@
 ﻿#pragma once
 
-#include "../Tables/TextureTableDictionary.h"
-#include "../Tables/TextureTable.h"
+#include <SFML/Graphics.hpp>
+#include "Tables/TextureTable.h"
 
-// Анимация
+// Мультиспрайт (спрайт с покадровой анимацией)
 class Flipbook
 {
 protected:
-    //TextureTableIndex index; Номер текстуры в таблице
-    sf::Sprite frame;
-    unsigned frameWidth; //Ширина кадра
-    unsigned frameHeight; //Высота кадра
-    unsigned frameCount; //Количество кадров
-    unsigned frameCurrent; //Текущий кадр
-    bool isVisible; //Видим ли спрайт
+	typedef TextureTableDictionary TTD;
+	TTD        index;         // Номер текстуры в таблице
+    sf::Sprite sprite;        // Фрейм-контейнер
+    unsigned   frameWidth;    // Ширина кадра
+    unsigned   frameHeight;   // Высота кадра
+    unsigned   frameCount;    // Количество кадров
+    unsigned   frameCurrent;  // Текущий кадр
+    bool       isVisible;     // Видим ли спрайт
     //Можно сделать поля для работы с эффектами
 
+	// Перерасчет области текстуры
+	void updateTextureRect();
 public:
-    //Конструкторы (todo)
+    //Конструкторы
     Flipbook();
     Flipbook(const Flipbook& temp);
-    Flipbook(TextureTableDictionary index_);
+    Flipbook(TTD index_);
 
     //Обновление текстуры
-    void assign(TextureTableDictionary index_);
+    void assignTexture(TTD index_);
 
     //Управление анимацией
-    void frameNext(); //Следущий кадр
-    void framePrevious(); //Предыдущий кадр
-    void frameFirst(); //Первый кадр
+    void nextFrame(); //Следущий кадр
+    void previousFrame(); //Предыдущий кадр
+    void firstFrame(); //Первый кадр
     
     //Рисование
-    void draw();
+    void drawIn(sf::RenderWindow& window);
     void makeVisible();
     void makeUnvisible();
 };

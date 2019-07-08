@@ -20,6 +20,9 @@
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp">
       <Filter>Implementations\Flipbook</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Tables\TextureTable.cpp">
+      <Filter>Implementations\Tables</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -87,6 +90,9 @@
     </Filter>
     <Filter Include="Headers\Tables">
       <UniqueIdentifier>{bb58efc0-abcd-4e75-ae56-a380f01235c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Tables">
+      <UniqueIdentifier>{787df1ed-488f-42df-b83f-d1c9f4d1b5c5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

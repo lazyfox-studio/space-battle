@@ -3,17 +3,17 @@
 #include <SFML/Graphics.hpp>
 #include "../Constants.h"
 #include "TextureTableDictionary.h"
-#include "Flipbook/Flipbook.h"
+#include <array>
 
 //Таблица текстур
 class TextureTable
 {
 protected:
-    static sf::Texture texture[TextureTableCount][1];
-    static bool isLoaded[TextureTableCount][1];        // Загружена ли текстура
-    static unsigned frameWidth[TextureTableCount][1];  // Ширина кадра
-    static unsigned frameHeight[TextureTableCount][1]; // Высота кадра
-    static unsigned frameCount[TextureTableCount][1];  // Число кадров
+    static std::array<sf::Texture, TextureTableCount> texture;
+	static std::array<bool, TextureTableCount> isLoaded;        // Загружена ли текстура
+	static std::array<unsigned, TextureTableCount> frameWidth;  // Ширина кадра
+	static std::array<unsigned, TextureTableCount> frameHeight; // Высота кадра
+	static std::array<unsigned, TextureTableCount> frameCount;  // Количество кадров
 
     friend class Flipbook;
 
