@@ -25,8 +25,21 @@ public:
     Flipbook(const Flipbook& temp);
     Flipbook(TTD index_);
 
+	// Аксессоры
+	bool visible() const;
+	float width() const;  // Оригинальная ширина спрайта
+	float height() const; // Оригинальная высота спрайта
+
+	sf::Vector2f getPosition() const;
+
     //Обновление текстуры
     void assignTexture(TTD index_);
+
+	// Модификация и перемещение
+	void setPosition(sf::Vector2f position);
+	void scale(float factor);
+	void rotate(float angle);
+	void setRotation(float angle);
 
     //Управление анимацией
     void nextFrame(); //Следущий кадр

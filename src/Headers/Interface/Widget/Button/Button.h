@@ -1,7 +1,10 @@
 ﻿#pragma once
-
+/*
 #include <SFML/Graphics.hpp>
 #include "Interface/Widget/Widget.h"
+#include "Flipbook/Flipbook.h"
+#include <array>
+#include <string>
 
 namespace Button
 {
@@ -25,47 +28,26 @@ namespace Button
 		void_this
 	};
 
-	// Набор текстур для кнопки
-	struct type
-	{
-		sf::Texture* texture[4] = { 0 };
-		bool stateExists[4] = { 0 };
-		int width = 0;
-		type(int);
-		type(int, const char* def, const char* clicked = "", const char* hovered = "", const char* disabled = "");
-		void assignTexture(state, const char*);
-		void assignTexture(const char* def, const char* clicked = "", const char* hovered = "", const char* disabled = "");
-	};
 
 	// Пустая кнопка
-	class btn : public ::Widget
+	class base : public ::Widget
 	{
 	protected:
-		int width;
-		int height;
 		state btnState;
-		type* prototype;
-		sf::Sprite sprite;
 		void (*a_void_void)();
 		void (*a_void_ptr)(void*);
 		action_type atype;
 		void* a_subject;
 
+		Flipbook sprite;
+		std::array<TextureTableDictionary, 4> textureIndexes;
+
 	public:
-		bool visible;
-		btn();
-		btn(type*);
-		virtual ~btn();
+		base();
+		base();
+		virtual ~base();
 
 		state getState();
-		int getWidth()
-		{
-			return width;
-		}
-		int getHeight()
-		{
-			return height;
-		}
 		state checkState(float mouse_x, float mouse_y, bool mouse_click, bool set_state = false);
 		virtual void setState(state);
 		virtual void setPosition(float, float) = 0;
@@ -74,6 +56,9 @@ namespace Button
 		void onClick(void(*func)());
 		void onClick(void(*func)(void*), void*);
 		void click();
+
+		void makeVisible();
+		void makeUnvisible();
 	};
 
 	// Кнопка с текстом
@@ -85,8 +70,7 @@ namespace Button
 		sf::FloatRect bounds;   // границы текстового спрайта
 	public:
 		text();
-		text(type*);
-		text(type*, const char*);
+		text(const char*);
 		~text();
 
 		void setText(const char*);
@@ -106,7 +90,6 @@ namespace Button
 		sf::Sprite iconSprite;
 	public:
 		icon();
-		icon(type*);
 		~icon();
 
 		void assignIcon(const char*);
@@ -114,4 +97,4 @@ namespace Button
 		void setPosition(float, float);
 		void drawIn(sf::RenderWindow&);
 	};
-}
+}*/

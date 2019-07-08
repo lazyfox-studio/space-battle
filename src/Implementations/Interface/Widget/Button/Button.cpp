@@ -1,76 +1,25 @@
 ﻿#include "Interface/Widget/Button/Button.h"
-
-Button::type::type(int _width)
+/*
+Button::base::base() : Widget()
 {
-	width = _width;
-}
-
-Button::type::type(int _width, const char* def, const char* clicked, const char* hovered, const char* disabled)
-{
-	width = _width;
-	assignTexture(def, clicked, hovered, disabled);
-}
-
-void Button::type::assignTexture(state _state, const char* file)
-{
-	if (stateExists[_state])
-		delete texture[_state];
-	if (!texture[_state])
-		texture[_state] = new sf::Texture;
-	texture[_state]->loadFromFile(file);
-	texture[_state]->setSmooth(true);
-	stateExists[_state] = true;
-}
-
-void Button::type::assignTexture(const char* def, const char* clicked, const char* hovered, const char* disabled)
-{
-	assignTexture(state::def, def);
-	if (clicked[0])
-		assignTexture(state::clicked, clicked);
-	if (hovered[0])
-		assignTexture(state::hovered, hovered);
-	if (disabled[0])
-		assignTexture(state::disabled, disabled);
-}
-
-Button::btn::btn() : Widget()
-{
-	visible = true;
-	prototype = nullptr;
-	sprite.setOrigin(0.f, 0.f);
 	x = y = 0.f;
-	width = height = 0;
 	btnState = state::def;
 	a_void_void = nullptr;
 	a_void_ptr = nullptr;
 	atype = action_type::no;
 }
 
-Button::btn::btn(type* p) : Widget()
-{
-	visible = true;
-	prototype = p;
-	sprite.setOrigin(0.f, 0.f);
-	x = y = 0.f;
-	width = prototype->texture[state::def]->getSize().x;
-	height = prototype->texture[state::def]->getSize().y;
-	btnState = state::def;
-	a_void_void = nullptr;
-	a_void_ptr = nullptr;
-	atype = action_type::no;
-}
-
-Button::btn::~btn()
+Button::base::~base()
 {
 
 }
 
-Button::state Button::btn::getState()
+Button::state Button::base::getState()
 {
 	return btnState;
 }
 
-Button::state Button::btn::checkState(float mouse_x, float mouse_y, bool mouse_click, bool _set_state)
+Button::state Button::base::checkState(float mouse_x, float mouse_y, bool mouse_click, bool _set_state)
 {
 	state _state = state::def;
 	if (!visible)
@@ -95,7 +44,7 @@ Button::state Button::btn::checkState(float mouse_x, float mouse_y, bool mouse_c
 	return _state;
 }
 
-void Button::btn::setState(state _state)
+void Button::base::setState(state _state)
 {
 	btnState = _state;
 	if (prototype->stateExists[btnState])
@@ -104,20 +53,20 @@ void Button::btn::setState(state _state)
 		sprite.setTexture(*(prototype->texture[state::def]));
 }
 
-void Button::btn::onClick(void(*func)())
+void Button::base::onClick(void(*func)())
 {
 	a_void_void = func;
 	atype = action_type::void_void;
 }
 
-void Button::btn::onClick(void(*func)(void*), void* ptr)
+void Button::base::onClick(void(*func)(void*), void* ptr)
 {
 	a_void_ptr = func;
 	atype = action_type::void_ptr;
 	a_subject = ptr;
 }
 
-void Button::btn::click()
+void Button::base::click()
 {
 	switch (atype)
 	{
@@ -132,7 +81,7 @@ void Button::btn::click()
 	}
 }
 
-Button::text::text() : btn()
+Button::text::text() : base()
 {
 	str = nullptr;
 	btnText.setOrigin(0.f, 0.f);
@@ -160,7 +109,7 @@ Button::text::~text()
 {
 	if (str)
 		delete[] str;
-	// ~btn();
+	// ~base();
 }
 
 void Button::text::setText(const char* _str)
@@ -236,7 +185,7 @@ void Button::text::drawIn(sf::RenderWindow& window)
 	window.draw(btnText);
 }
 
-Button::icon::icon() : btn()
+Button::icon::icon() : base()
 {
 	iconTexture = new sf::Texture;
 }
@@ -250,7 +199,7 @@ Button::icon::icon(type* p) : btn(p)
 Button::icon::~icon()
 {
 	delete iconTexture;
-	// ~btn();
+	// ~base();
 }
 
 void Button::icon::assignIcon(const char* file)
@@ -284,3 +233,4 @@ void Button::icon::drawIn(sf::RenderWindow& window)
 	window.draw(sprite);
 	window.draw(iconSprite);
 }
+*/

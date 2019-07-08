@@ -1,4 +1,5 @@
 #include "Flipbook/Flipbook.h"
+#include "..\..\Headers\Flipbook\Flipbook.h"
 
 void Flipbook::updateTextureRect()
 {
@@ -39,6 +40,26 @@ Flipbook::Flipbook(TTD index_)
 	updateTextureRect();
 }
 
+bool Flipbook::visible() const
+{
+	return isVisible;
+}
+
+float Flipbook::width() const
+{
+	return sprite.getOrigin().x;
+}
+
+float Flipbook::height() const
+{
+	return sprite.getOrigin().y;
+}
+
+sf::Vector2f Flipbook::getPosition() const
+{
+	return sprite.getPosition();
+}
+
 void Flipbook::assignTexture(TTD index_)
 {
 	index = index_;
@@ -48,6 +69,26 @@ void Flipbook::assignTexture(TTD index_)
 	frameCurrent = 0U;
 	sprite.setTexture(TextureTable::texture[index]);
 	updateTextureRect();
+}
+
+void Flipbook::setPosition(sf::Vector2f position)
+{
+	sprite.setPosition(position);
+}
+
+void Flipbook::scale(float factor)
+{
+	sprite.setScale(sf::Vector2f(factor, factor));
+}
+
+void Flipbook::rotate(float angle)
+{
+	sprite.rotate(angle);
+}
+
+void Flipbook::setRotation(float angle)
+{
+	sprite.setRotation(angle);
 }
 
 void Flipbook::nextFrame()

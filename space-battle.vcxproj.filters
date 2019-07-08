@@ -17,11 +17,11 @@
     <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp">
       <Filter>Implementations\Interface\Widget\Scoreboard</Filter>
     </ClCompile>
-    <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp">
-      <Filter>Implementations\Flipbook</Filter>
-    </ClCompile>
     <ClCompile Include="src\Implementations\Tables\TextureTable.cpp">
       <Filter>Implementations\Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp">
+      <Filter>Implementations\Flipbook</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -30,9 +30,6 @@
     </Filter>
     <Filter Include="Headers\Actor">
       <UniqueIdentifier>{3ad7ad12-4cfc-4997-b6d4-2ca6fb7bcf0d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Headers\Flipbook">
-      <UniqueIdentifier>{5a1d770d-839c-42ae-a571-a673d4a64bf4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Headers\Global">
       <UniqueIdentifier>{a647cb72-ab5e-4c61-884c-63c69a1246c2}</UniqueIdentifier>
@@ -85,22 +82,22 @@
     <Filter Include="Implementations\Global">
       <UniqueIdentifier>{69279459-60a2-4219-bd91-dc4c1392eece}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Implementations\Flipbook">
-      <UniqueIdentifier>{602ca474-4e4a-4fa6-88ea-83419cc85cae}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Headers\Tables">
       <UniqueIdentifier>{bb58efc0-abcd-4e75-ae56-a380f01235c0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Implementations\Tables">
       <UniqueIdentifier>{787df1ed-488f-42df-b83f-d1c9f4d1b5c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers\Flipbook">
+      <UniqueIdentifier>{5a1d770d-839c-42ae-a571-a673d4a64bf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Flipbook">
+      <UniqueIdentifier>{602ca474-4e4a-4fa6-88ea-83419cc85cae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
       <Filter>Headers\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Flipbook\Flipbook.h">
-      <Filter>Headers\Flipbook</Filter>
     </ClInclude>
     <ClInclude Include="src\Headers\Actor\Actor.h">
       <Filter>Headers\Actor</Filter>
@@ -144,6 +141,9 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Tables\TextureTableDictionary.h">
       <Filter>Headers\Tables</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Flipbook\Flipbook.h">
+      <Filter>Headers\Flipbook</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
