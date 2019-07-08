@@ -62,16 +62,6 @@ void Button::base::setState(state state_)
 		btn.assignTexture(textureIndexes[state::def]);
 }
 
-void Button::base::onClick(void(*func)())
-{
-	
-}
-
-void Button::base::onClick(void(*func)(void*), void* ptr)
-{
-	
-}
-
 void Button::base::click()
 {
 	
@@ -129,7 +119,7 @@ void Button::text::setPosition(sf::Vector2f position)
 	float shift_x = btn.width() / 2.f, shift_y = btn.height() / 2.f;
 	x = position.x;
 	y = position.y;
-	btn.setPosition(sf::Vector2f(x, y));
+	btn.setPosition(position);
 	btnText.setPosition(x + shift_x, y + shift_y);
 }
 

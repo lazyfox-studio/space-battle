@@ -57,7 +57,6 @@ namespace Button
 	};
 
 	// Кнопка с текстом
-	template <typename FT>
 	class text : base
 	{
 		std::string str;
