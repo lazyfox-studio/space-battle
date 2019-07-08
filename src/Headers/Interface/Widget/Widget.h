@@ -11,14 +11,12 @@ protected:
 	float x;
 	float y;
 
-	// Указатель на окно (для отслеживания углов)
-	WindowControl::screenCorners* corners;
 public:
 	// Конструкторы и деструктор
 	Widget();
 	Widget(const Widget& temp);
 	Widget(sf::Sprite&);
-	~Widget();
+	virtual ~Widget();
 
 	virtual void drawIn(sf::RenderWindow& window);
 };

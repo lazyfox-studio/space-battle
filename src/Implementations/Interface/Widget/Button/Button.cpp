@@ -33,7 +33,7 @@ void Button::type::assignTexture(const char* def, const char* clicked, const cha
 		assignTexture(state::disabled, disabled);
 }
 
-Button::btn::btn()
+Button::btn::btn() : Widget()
 {
 	visible = true;
 	prototype = nullptr;
@@ -46,7 +46,7 @@ Button::btn::btn()
 	atype = action_type::no;
 }
 
-Button::btn::btn(type* p)
+Button::btn::btn(type* p) : Widget()
 {
 	visible = true;
 	prototype = p;
