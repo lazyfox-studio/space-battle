@@ -93,15 +93,6 @@ void Actor::addAcceleration(const sf::Vector2f acceleration_)
     acceleration = acceleration + acceleration_;
 }
 
-void Actor::gravitation(const Actor& temp)
-{
-    if (!attractable) 
-		return;
-    float d = distance(temp);
-    float f = G * (m * temp.m) / (d * d);
-    addAcceleration(sf::Vector2f((temp.x - x) / d * f / m, (temp.y - y) / d * f / m));
-}
-
 void Actor::updateAnimation()
 {
 

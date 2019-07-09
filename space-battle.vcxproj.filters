@@ -26,8 +26,8 @@
     <ClCompile Include="src\Implementations\Interface\Widget\Bar\Bar.cpp">
       <Filter>Implementations\Interface\Widget\Bar</Filter>
     </ClCompile>
-    <ClCompile Include="src\Implementations\Tables\FontTable.cpp">
-      <Filter>Implementations\Tables</Filter>
+    <ClCompile Include="src\Functions\Physic\Physic.cpp">
+      <Filter>Functions\Physic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -109,11 +109,8 @@
     <Filter Include="Implementations\Interface\Widget\Bar">
       <UniqueIdentifier>{41a070cd-3e93-4206-ac3d-5787df20757f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Headers\Tables\TextureTable">
-      <UniqueIdentifier>{cf5113ff-6b98-4a3e-a5f0-54dad0504ba8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Headers\Tables\FontTable">
-      <UniqueIdentifier>{e6a6639f-8e8c-4abd-91e2-45e0bcfeebee}</UniqueIdentifier>
+    <Filter Include="Functions\Physic">
+      <UniqueIdentifier>{2323ca53-d492-4bca-9503-8b286a642d32}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +126,7 @@
     <ClInclude Include="src\Headers\Actor\Pawn\Character\Character.h">
       <Filter>Headers\Actor\Pawn\Character</Filter>
     </ClInclude>
+    <ClInclude Include="src\Constants.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h">
       <Filter>Headers\Interface\Widget\Scoreboard</Filter>
     </ClInclude>
@@ -156,6 +154,12 @@
     <ClInclude Include="src\Headers\Global\WindowCorners.h">
       <Filter>Headers\Global</Filter>
     </ClInclude>
+    <ClInclude Include="src\Headers\Tables\TextureTable.h">
+      <Filter>Headers\Tables</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Tables\TextureTableDictionary.h">
+      <Filter>Headers\Tables</Filter>
+    </ClInclude>
     <ClInclude Include="src\Headers\Flipbook\Flipbook.h">
       <Filter>Headers\Flipbook</Filter>
     </ClInclude>
@@ -165,20 +169,8 @@
     <ClInclude Include="src\Headers\Interface\Widget\Bar\Bar.h">
       <Filter>Headers\Interface\Widget\Bar</Filter>
     </ClInclude>
-    <ClInclude Include="src\Headers\Tables\TextureTable\TextureTable.h">
-      <Filter>Headers\Tables\TextureTable</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Tables\TextureTable\TextureTableDictionary.h">
-      <Filter>Headers\Tables\TextureTable</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Tables\FontTable\FontTable.h">
-      <Filter>Headers\Tables\FontTable</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Tables\FontTable\FontTableDictionary.h">
-      <Filter>Headers\Tables\FontTable</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Constants.h">
-      <Filter>Headers</Filter>
+    <ClInclude Include="src\Functions\Physic\Physic.h">
+      <Filter>Functions\Physic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
