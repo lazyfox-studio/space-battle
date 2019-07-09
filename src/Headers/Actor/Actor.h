@@ -47,7 +47,6 @@ public:
 	// Управление
     void setPosition(float x_, float y_, const sf::Vector2f velocity_ = sf::Vector2f(0, 0));
     void addAcceleration(const sf::Vector2f acceleration_);
-    void gravitation(const Actor& temp);
 
     // Отображение
     void updateAnimation();
