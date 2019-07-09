@@ -1,7 +1,10 @@
 ﻿#pragma once
 
 // Гравитационная постоянная
-constexpr auto G = 1.0f;
+constexpr float G = 1.0f;
+
+// Ускорение свободного падения
+constexpr float g = 9.8f;
 
 // Количество подгружаемых текстур
 constexpr size_t TextureTableCount = 1;

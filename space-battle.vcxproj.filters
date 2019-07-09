@@ -29,6 +29,9 @@
     <ClCompile Include="src\Functions\Physic\Physic.cpp">
       <Filter>Functions\Physic</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Tables\FontTable.cpp">
+      <Filter>Implementations\Tables</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -112,6 +115,12 @@
     <Filter Include="Functions\Physic">
       <UniqueIdentifier>{2323ca53-d492-4bca-9503-8b286a642d32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers\Tables\FontTable">
+      <UniqueIdentifier>{e0bfc51f-f49f-4275-89bf-58f7e7be6f42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Tables\TextureTable">
+      <UniqueIdentifier>{e26d17d8-7e11-4599-98ee-c42ae5c16a5d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -126,7 +135,6 @@
     <ClInclude Include="src\Headers\Actor\Pawn\Character\Character.h">
       <Filter>Headers\Actor\Pawn\Character</Filter>
     </ClInclude>
-    <ClInclude Include="src\Constants.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h">
       <Filter>Headers\Interface\Widget\Scoreboard</Filter>
     </ClInclude>
@@ -154,12 +162,6 @@
     <ClInclude Include="src\Headers\Global\WindowCorners.h">
       <Filter>Headers\Global</Filter>
     </ClInclude>
-    <ClInclude Include="src\Headers\Tables\TextureTable.h">
-      <Filter>Headers\Tables</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Tables\TextureTableDictionary.h">
-      <Filter>Headers\Tables</Filter>
-    </ClInclude>
     <ClInclude Include="src\Headers\Flipbook\Flipbook.h">
       <Filter>Headers\Flipbook</Filter>
     </ClInclude>
@@ -171,6 +173,21 @@
     </ClInclude>
     <ClInclude Include="src\Functions\Physic\Physic.h">
       <Filter>Functions\Physic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Constants.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Tables\FontTable\FontTable.h">
+      <Filter>Headers\Tables\FontTable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Tables\FontTable\FontTableDictionary.h">
+      <Filter>Headers\Tables\FontTable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Tables\TextureTable\TextureTable.h">
+      <Filter>Headers\Tables\TextureTable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Tables\TextureTable\TextureTableDictionary.h">
+      <Filter>Headers\Tables\TextureTable</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
