@@ -4,6 +4,7 @@
 #include "Constants.h"
 #include "TextureTableDictionary.h"
 #include <array>
+#include <string>
 
 //Таблица текстур
 class TextureTable
@@ -11,6 +12,7 @@ class TextureTable
 protected:
     static std::array<sf::Texture, TextureTableCount> texture;
 	static std::array<bool, TextureTableCount> isLoaded;        // Загружена ли текстура
+	static std::array<std::string, TextureTableCount> texturePath; // Путь к файлам
 	static std::array<unsigned, TextureTableCount> frameWidth;  // Ширина кадра
 	static std::array<unsigned, TextureTableCount> frameHeight; // Высота кадра
 	static std::array<unsigned, TextureTableCount> frameCount;  // Количество кадров
