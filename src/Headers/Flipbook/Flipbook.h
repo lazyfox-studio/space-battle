@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #include <SFML/Graphics.hpp>
-#include "Tables/TextureTable.h"
+#include "Tables/TextureTable/TextureTable.h"
 
 // Мультиспрайт (спрайт с покадровой анимацией)
 class Flipbook

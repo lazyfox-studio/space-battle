@@ -2,7 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <cmath>
-#include "../Constants.h"
+#include "Constants.h"
 #include "../Flipbook/Flipbook.h"
 
 // Actor (объект, который может быть помещён на игровую локацию)
