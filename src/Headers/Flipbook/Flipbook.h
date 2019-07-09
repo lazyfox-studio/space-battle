@@ -40,6 +40,7 @@ public:
 	void scale(float factor);
 	void rotate(float angle);
 	void setRotation(float angle);
+	void setTextureRect(sf::IntRect rect);
 
     //Управление анимацией
     void nextFrame(); //Следущий кадр

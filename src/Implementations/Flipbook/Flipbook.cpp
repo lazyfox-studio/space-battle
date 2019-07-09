@@ -91,6 +91,11 @@ void Flipbook::setRotation(float angle)
 	sprite.setRotation(angle);
 }
 
+void Flipbook::setTextureRect(sf::IntRect rect)
+{
+	sprite.setTextureRect(rect);
+}
+
 void Flipbook::nextFrame()
 {
 	frameCurrent = frameCurrent < frameCount - 1 ? frameCurrent + 1 : 0U;

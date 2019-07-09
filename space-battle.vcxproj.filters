@@ -23,6 +23,9 @@
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp">
       <Filter>Implementations\Flipbook</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Interface\Widget\Bar\Bar.cpp">
+      <Filter>Implementations\Interface\Widget\Bar</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -97,6 +100,12 @@
     <Filter Include="Headers\Interface\DialogWindow">
       <UniqueIdentifier>{9079e281-5d47-49be-b187-d6e5c115bba4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers\Interface\Widget\Bar">
+      <UniqueIdentifier>{8286483f-d3d1-48ec-8546-f64e2df29f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Interface\Widget\Bar">
+      <UniqueIdentifier>{41a070cd-3e93-4206-ac3d-5787df20757f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -150,6 +159,9 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Interface\DialogWindow\DialogWindow.h">
       <Filter>Headers\Interface\DialogWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Interface\Widget\Bar\Bar.h">
+      <Filter>Headers\Interface\Widget\Bar</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
