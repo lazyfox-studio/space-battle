@@ -78,8 +78,8 @@ void Bar::setWidth(float width_)
 void Bar::update()
 {
 	float percentage = current ? *current / (max - min) : 0.f;
-	background.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(background.width(), background.height())));
-	bar.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i((int)(bar.width() * percentage), bar.height())));
+	background.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i(int(background.width()), int(background.height()))));
+	bar.setTextureRect(sf::IntRect(sf::Vector2i(0, 0), sf::Vector2i((int)(bar.width() * percentage), int(bar.height()))));
 }
 
 void Bar::drawIn(sf::RenderWindow& window)
