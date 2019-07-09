@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #include <SFML/Graphics.hpp>
-#include "../Constants.h"
+#include "Constants.h"
 #include "TextureTableDictionary.h"
 #include <array>
 

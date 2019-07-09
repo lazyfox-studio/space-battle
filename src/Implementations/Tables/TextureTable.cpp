@@ -1,4 +1,4 @@
-#include "Tables/TextureTable.h"
+#include "Tables/TextureTable/TextureTable.h"
 
 std::array<sf::Texture, TextureTableCount> TextureTable::texture = std::array<sf::Texture, TextureTableCount>();
 std::array<bool, TextureTableCount> TextureTable::isLoaded = std::array<bool, TextureTableCount>();

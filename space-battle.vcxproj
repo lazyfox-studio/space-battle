@@ -139,11 +139,12 @@
     <ClCompile Include="src\Implementations\Interface\Widget\Button\Button.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Widget.cpp" />
+    <ClCompile Include="src\Implementations\Tables\FontTable.cpp" />
     <ClCompile Include="src\Implementations\Tables\TextureTable.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Constants.h" />
+    <ClInclude Include="src\Headers\Constants.h" />
     <ClInclude Include="src\Functions\Functions.h" />
     <ClInclude Include="src\Functions\Physic\Physic.h" />
     <ClInclude Include="src\Headers\Actor\Actor.h" />
@@ -161,8 +162,10 @@
     <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Widget.h" />
     <ClInclude Include="src\Headers\Scene\Level.h" />
-    <ClInclude Include="src\Headers\Tables\TextureTable.h" />
-    <ClInclude Include="src\Headers\Tables\TextureTableDictionary.h" />
+    <ClInclude Include="src\Headers\Tables\FontTable\FontTable.h" />
+    <ClInclude Include="src\Headers\Tables\FontTable\FontTableDictionary.h" />
+    <ClInclude Include="src\Headers\Tables\TextureTable\TextureTable.h" />
+    <ClInclude Include="src\Headers\Tables\TextureTable\TextureTableDictionary.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
