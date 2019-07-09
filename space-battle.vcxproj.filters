@@ -94,6 +94,9 @@
     <Filter Include="Implementations\Flipbook">
       <UniqueIdentifier>{602ca474-4e4a-4fa6-88ea-83419cc85cae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers\Interface\DialogWindow">
+      <UniqueIdentifier>{9079e281-5d47-49be-b187-d6e5c115bba4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -144,6 +147,9 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Flipbook\Flipbook.h">
       <Filter>Headers\Flipbook</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Interface\DialogWindow\DialogWindow.h">
+      <Filter>Headers\Interface\DialogWindow</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
