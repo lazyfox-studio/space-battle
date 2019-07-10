@@ -12,6 +12,9 @@ LuaScript::LuaScript()
 
 LuaScript::LuaScript(const std::string filename_)
 {
+	states++;
+	if (!L)
+		L = luaL_newstate();
 	if (luaL_loadfile(L, filename_.c_str()))
 		return;
 	else if (lua_pcall(L, 0, 0, 0))
