@@ -3,10 +3,10 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>
 #include "Constants.h"
-#include "../Flipbook/Flipbook.h"
-#include"../Math/Component/Component.h"
-#include"../Math/Component/Rectangle/Rectangle.h"
-#include"../Math/Component/Ellipse/Ellipse.h"
+#include "Flipbook/Flipbook.h"
+#include "Math/Component/Component.h"
+#include "Math/Component/Rectangle/Rectangle.h"
+#include "Math/Component/Ellipse/Ellipse.h"
 
 // Actor (объект, который может быть помещён на игровую локацию)
 class Actor

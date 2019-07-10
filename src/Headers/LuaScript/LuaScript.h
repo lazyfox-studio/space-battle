@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <string>
 extern "C" {
@@ -18,5 +18,6 @@ public:
 	LuaScript(const std::string filename_);
 	~LuaScript();
 
+	int execute(const std::string filename_);
 	luabridge::LuaRef getGlobal(const std::string varName);
 };

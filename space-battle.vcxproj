@@ -143,6 +143,7 @@
     <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Widget.cpp" />
     <ClCompile Include="src\Implementations\LuaScript\LuaScript.cpp" />
+    <ClCompile Include="src\Implementations\Tables\DTextureTable.cpp" />
     <ClCompile Include="src\Implementations\Tables\FontTable.cpp" />
     <ClCompile Include="src\Implementations\Tables\TextureTable.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -173,6 +174,7 @@
     <ClInclude Include="src\Headers\Math\Component\Ellipse\Ellipse.h" />
     <ClInclude Include="src\Headers\Math\Component\Rectangle\Rectangle.h" />
     <ClInclude Include="src\Headers\Scene\Level.h" />
+    <ClInclude Include="src\Headers\Tables\DTextureTable.h" />
     <ClInclude Include="src\Headers\Tables\FontTable\FontTable.h" />
     <ClInclude Include="src\Headers\Tables\FontTable\FontTableDictionary.h" />
     <ClInclude Include="src\Headers\Tables\TextureTable\TextureTable.h" />

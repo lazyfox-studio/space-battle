@@ -44,6 +44,9 @@
     <ClCompile Include="src\Implementations\LuaScript\LuaScript.cpp">
       <Filter>Implementations\LuaScript</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Tables\DTextureTable.cpp">
+      <Filter>Implementations\Tables</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -254,6 +257,9 @@
     </ClInclude>
     <ClInclude Include="src\Headers\LuaScript\LuaScript.h">
       <Filter>Headers\LuaScript</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Tables\DTextureTable.h">
+      <Filter>Headers\Tables</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
