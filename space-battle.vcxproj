@@ -161,6 +161,9 @@
     <ClInclude Include="src\Headers\Interface\Widget\Decoration\Decoration.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Widget.h" />
+    <ClInclude Include="src\Headers\Math\Component\Component.h" />
+    <ClInclude Include="src\Headers\Math\Component\Ellipse\Ellipse.h" />
+    <ClInclude Include="src\Headers\Math\Component\Rectangle\Rectangle.h" />
     <ClInclude Include="src\Headers\Scene\Level.h" />
     <ClInclude Include="src\Headers\Tables\FontTable\FontTable.h" />
     <ClInclude Include="src\Headers\Tables\FontTable\FontTableDictionary.h" />
