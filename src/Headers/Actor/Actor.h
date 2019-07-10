@@ -14,8 +14,9 @@ protected:
     float y;
 
     // Параметры тела
-    float r; // Радиус вписывающей окружности
-    float m; // Масса
+    float height; //Высота компоненты
+    float widht;  //Ширина компоненты
+    float m;      // Масса
 
     // Свойства тела
 
@@ -31,7 +32,7 @@ protected:
 public:
     //Конструкторы и Деструкторы
     Actor();
-    Actor(float x_, float y_, float r_, float m_, bool attractable_, bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_);
+    Actor(float x_, float y_, float height_, float widht_, float m_, bool attractable_, bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_);
     Actor(const Actor& temp);
     ~Actor();
 

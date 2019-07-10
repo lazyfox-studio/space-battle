@@ -6,9 +6,9 @@
 namespace Physic
 {
     //Ньютоновское притяжение
-    void Gravitation(Actor& a, Actor& b);
+    void gravitation(Actor& a, Actor& b);
     //Притяжение по оси Y
-    void VerticalAcceleration(Actor& a);
+    void verticalAcceleration(Actor& a);
     //Проверка коллизий
-    void Collisions(Actor& a, Actor& b);
+    void collisions(Actor& a, Actor& b);
 }

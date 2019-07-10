@@ -6,7 +6,8 @@ Actor::Actor()
 {
     x = 0;
     y = 0;
-    r = 0;
+    height = 0;
+    widht = 0;
     m = 0;
     attractable = false;
     touchable = false;
@@ -15,12 +16,13 @@ Actor::Actor()
     //Что-то со спрайтом
 }
 
-Actor::Actor(float x_, float y_, float r_, float m_, bool attractable_, 
+Actor::Actor(float x_, float y_, float height_, float widht_, float m_, bool attractable_, 
 	bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_)
 {
     x = x_;
     y = y_;
-    r = r_;
+    height = height_;
+    widht = widht_;
     m = m_;
     attractable = attractable_;
     touchable = touchable_;
@@ -32,7 +34,8 @@ Actor::Actor(const Actor& temp)
 {
     x = temp.x;
     y = temp.y;
-    r = temp.r;
+    height = temp.height;
+    widht = temp.widht;
     m = temp.m;
     attractable = temp.attractable;
     touchable = temp.touchable;

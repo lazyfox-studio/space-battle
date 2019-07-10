@@ -4,7 +4,7 @@
 
 namespace Physic
 {
-    void Gravitation(Actor& a, Actor& b)
+    void gravitation(Actor& a, Actor& b)
     {
         if (!(a.getM() && b.getM())) return; //Масса 0 -> нет притяжения
         if (!(a.isAttractable() || b.isAttractable())) return; //Нет смысла притягивать
@@ -14,12 +14,12 @@ namespace Physic
         if (b.isAttractable()) b.addAcceleration(sf::Vector2f((a.getX() - b.getX()) / d * f / b.getM(), (a.getY() - b.getY()) / d * f / b.getM()));
     }
 
-    void VerticalAcceleration(Actor& a)
+    void verticalAcceleration(Actor& a)
     {
         if (a.isAttractable()) a.addAcceleration(sf::Vector2f(0, g));
     }
 
-    void Collisions(Actor& a, Actor& b)
+    void collisions(Actor& a, Actor& b)
     {
 
     }
