@@ -2,12 +2,20 @@
 
 std::map<std::string, DTexture> DTextureTable::textures = std::map<std::string, DTexture>();
 
-const sf::Texture& DTextureTable::get(const std::string index)
+const sf::Texture& DTextureTable::getTexture(const std::string index)
 {
 	auto textureIter = textures.find(index);
 	if (textureIter == textures.end())
 		throw std::out_of_range("Texture with that index not loaded."); // noindex
 	return (*textureIter).second.texture;
+}
+
+const DTexture& DTextureTable::get(const std::string index)
+{
+	auto textureIter = textures.find(index);
+	if (textureIter == textures.end())
+		throw std::out_of_range("Texture with that index not loaded."); // noindex
+	return (*textureIter).second;
 }
 
 void DTextureTable::load(const std::string index)
