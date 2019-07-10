@@ -59,9 +59,14 @@ float Actor::getY() const
     return x;
 }
 
-float Actor::getR() const
+float Actor::getHeight() const
 {
-    return r;
+    return height;
+}
+
+float Actor::getWidht() const
+{
+    return widht;
 }
 
 float Actor::getM() const

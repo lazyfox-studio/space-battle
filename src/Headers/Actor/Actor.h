@@ -39,7 +39,8 @@ public:
     // Аксессоры
     float getX() const;
     float getY() const;
-    float getR() const;
+    float getHeight() const;
+    float getWidht() const;
     float getM() const;
     bool isAttractable() const;
     bool isTouchable() const;
