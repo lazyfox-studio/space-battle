@@ -41,6 +41,9 @@
     <ClCompile Include="src\Implementations\Interface\Menu\MenuPage.cpp">
       <Filter>Implementations\Interface\Menu</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\LuaScript\LuaScript.cpp">
+      <Filter>Implementations\LuaScript</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -157,6 +160,12 @@
     <Filter Include="Implementations\Interface\Menu">
       <UniqueIdentifier>{567b8912-b601-4ba0-8849-bf5c3a9a71ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers\LuaScript">
+      <UniqueIdentifier>{b738c8ab-8916-4794-83da-87b5684fb78e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\LuaScript">
+      <UniqueIdentifier>{1a3dd723-dd5b-4d1f-a2a6-910b2a2f29d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -242,6 +251,9 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Interface\Menu\MenuPage.h">
       <Filter>Headers\Interface\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\LuaScript\LuaScript.h">
+      <Filter>Headers\LuaScript</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

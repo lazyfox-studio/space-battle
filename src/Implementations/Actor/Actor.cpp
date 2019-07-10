@@ -4,10 +4,10 @@
 
 Actor::Actor()
 {
-    x = 0;
-    y = 0;
-    height = 0;
-    widht = 0;
+	cmp->x = 0;
+	cmp->y = 0;
+	cmp->height = 0;
+	cmp->width = 0;
     m = 0;
     attractable = false;
     touchable = false;
@@ -16,13 +16,13 @@ Actor::Actor()
     //Что-то со спрайтом
 }
 
-Actor::Actor(float x_, float y_, float height_, float widht_, float m_, bool attractable_, 
+Actor::Actor(float x_, float y_, float height_, float width_, unsigned componentType, float m_, bool attractable_,
 	bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_)
 {
-    x = x_;
-    y = y_;
-    height = height_;
-    widht = widht_;
+	cmp->x = x_;
+	cmp->y = y_;
+	cmp->height = height_;
+	cmp->width = width_;
     m = m_;
     attractable = attractable_;
     touchable = touchable_;
@@ -32,10 +32,7 @@ Actor::Actor(float x_, float y_, float height_, float widht_, float m_, bool att
 
 Actor::Actor(const Actor& temp)
 {
-    x = temp.x;
-    y = temp.y;
-    height = temp.height;
-    widht = temp.widht;
+	*cmp = *(temp.cmp);
     m = temp.m;
     attractable = temp.attractable;
     touchable = temp.touchable;
@@ -51,22 +48,22 @@ Actor::~Actor()
 
 float Actor::getX() const
 {
-    return x;
+    return cmp->x;
 }
 
 float Actor::getY() const
 {
-    return x;
+    return cmp->y;
 }
 
 float Actor::getHeight() const
 {
-    return height;
+    return cmp->height;
 }
 
-float Actor::getWidht() const
+float Actor::getWidth() const
 {
-    return widht;
+    return cmp->width;
 }
 
 float Actor::getM() const
@@ -86,13 +83,13 @@ bool Actor::isTouchable() const
 
 float Actor::distance(const Actor& temp) const
 {
-	return sqrt((x - temp.x) * (x - temp.x) + (y - temp.y) * (y - temp.y));
+	return sqrt((cmp->x - temp.cmp->x) * (cmp->x - temp.cmp->x) + (cmp->y - temp.cmp->y) * (cmp->y - temp.cmp->y));
 }
 
 void Actor::setPosition(float x_, float y_, const sf::Vector2f velocity_)
 {
-    x = x_;
-    y = y_;
+    cmp->x = x_;
+	cmp->y = y_;
     velocity = velocity_;
 }
 

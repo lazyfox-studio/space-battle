@@ -91,13 +91,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>src\Headers;D:\SFML-2.5.1-x64\include;E:\Source\SFML-2.5.1 x64\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\Headers;D:\SFML-2.5.1-x64\include;E:\Source\SFML-2.5.1 x64\include;D:\Lua-5.3.5-x64\include;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>E:\Source\SFML-2.5.1 x64\lib;D:\SFML-2.5.1-x64\lib;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-graphics-s-d.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-audio-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Source\SFML-2.5.1 x64\lib;D:\SFML-2.5.1-x64\lib;D:\Lua-5.3.5-x64;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>lua53.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-graphics-s-d.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-audio-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,6 +142,7 @@
     <ClCompile Include="src\Implementations\Interface\Widget\Icon\Icon.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Widget.cpp" />
+    <ClCompile Include="src\Implementations\LuaScript\LuaScript.cpp" />
     <ClCompile Include="src\Implementations\Tables\FontTable.cpp" />
     <ClCompile Include="src\Implementations\Tables\TextureTable.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -167,6 +168,7 @@
     <ClInclude Include="src\Headers\Interface\Widget\Icon\Icon.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Widget.h" />
+    <ClInclude Include="src\Headers\LuaScript\LuaScript.h" />
     <ClInclude Include="src\Headers\Math\Component\Component.h" />
     <ClInclude Include="src\Headers\Math\Component\Ellipse\Ellipse.h" />
     <ClInclude Include="src\Headers\Math\Component\Rectangle\Rectangle.h" />
