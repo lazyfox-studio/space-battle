@@ -137,6 +137,7 @@
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Bar\Bar.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Button\Button.cpp" />
+    <ClCompile Include="src\Implementations\Interface\Widget\Icon\Icon.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Widget.cpp" />
     <ClCompile Include="src\Implementations\Tables\FontTable.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="src\Headers\Interface\Widget\Bar\Bar.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Button\Button.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Decoration\Decoration.h" />
+    <ClInclude Include="src\Headers\Interface\Widget\Icon\Icon.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Widget.h" />
     <ClInclude Include="src\Headers\Math\Component\Component.h" />

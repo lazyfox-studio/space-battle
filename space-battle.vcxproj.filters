@@ -32,6 +32,9 @@
     <ClCompile Include="src\Implementations\Tables\FontTable.cpp">
       <Filter>Implementations\Tables</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Interface\Widget\Icon\Icon.cpp">
+      <Filter>Implementations\Interface\Widget\Icon</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -136,6 +139,12 @@
     <Filter Include="Headers\Math\Component\Rectangle">
       <UniqueIdentifier>{11fba554-0ebe-4ab1-92c1-de3515e76fc5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Implementations\Interface\Widget\Icon">
+      <UniqueIdentifier>{beef79ce-07e0-4ed3-9534-e86e76b3d029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Interface\Widget\Icon">
+      <UniqueIdentifier>{e3df9bb7-cfad-4218-b94a-67f4a2a9d83a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -212,6 +221,9 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Math\Component\Rectangle\Rectangle.h">
       <Filter>Headers\Math\Component\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Interface\Widget\Icon\Icon.h">
+      <Filter>Headers\Interface\Widget\Icon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
