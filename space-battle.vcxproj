@@ -91,13 +91,17 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\Source\Lua-5.3.5-x64\include;src\Headers;D:\SFML-2.5.1-x64\include;E:\Source\SFML-2.5.1 x64\include;D:\Lua-5.3.5-x64\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Source\Lua-5.3.5-x64\include;src\Headers;D:\SFML-2.5.1-x64\include;E:\Source\SFML-2.5.1 x64\include;D:\Lua-5.3.5-x64\include;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>E:\Source\Lua-5.3.5-x64;E:\Source\SFML-2.5.1 x64\lib;D:\SFML-2.5.1-x64\lib;D:\Lua-5.3.5-x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Lua-5.3.5-x64;E:\Source\Lua-5.3.5-x64;E:\Source\SFML-2.5.1 x64\lib;D:\SFML-2.5.1-x64\lib;</AdditionalLibraryDirectories>
       <AdditionalDependencies>lua53.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-graphics-s-d.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-audio-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

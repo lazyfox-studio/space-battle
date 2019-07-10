@@ -163,10 +163,10 @@
     <Filter Include="Implementations\LuaScript">
       <UniqueIdentifier>{1a3dd723-dd5b-4d1f-a2a6-910b2a2f29d5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Config">
+    <Filter Include="config">
       <UniqueIdentifier>{efcaa9ff-cb8a-40b7-87d0-74ad09544be5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Config\Tables">
+    <Filter Include="config\Tables">
       <UniqueIdentifier>{e7f66315-7de9-45ed-aa07-5ab1030c1d1d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -258,7 +258,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="config\Tables\Textures.lua">
-      <Filter>Config\Tables</Filter>
+      <Filter>config\Tables</Filter>
     </None>
   </ItemGroup>
 </Project>

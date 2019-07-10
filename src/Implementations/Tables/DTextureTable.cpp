@@ -20,7 +20,8 @@ const DTexture& DTextureTable::get(const std::string index)
 
 void DTextureTable::load(const std::string index)
 {
-	LuaScript script("../../config/Tables/Textures.lua");
+	LuaScript script;
+	script.execute("config/Tables/Textures.lua");
 	luabridge::LuaRef texturesData = script.getGlobal("textures");
 	luabridge::LuaRef textureData = texturesData[index.c_str()];
 	if (textureData.isNil())
