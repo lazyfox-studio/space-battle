@@ -7,7 +7,7 @@
 class Icon : Widget
 {
 protected:
-    typedef TextureTableDictionary TTD;
+    typedef std::string TTD;
     bool* current;
     Flipbook onFlipbook, offFlipbook;
 

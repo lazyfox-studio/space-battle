@@ -5,8 +5,8 @@
 Icon::Icon()
 {
     current = nullptr;
-    onFlipbook.assignTexture(TTD::TextureEmpty);
-    offFlipbook.assignTexture(TTD::TextureEmpty);
+    onFlipbook.assignTexture("Empty");
+    offFlipbook.assignTexture("Empty");
 }
 
 Icon::Icon(const Icon& temp)

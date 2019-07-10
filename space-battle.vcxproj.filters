@@ -17,9 +17,6 @@
     <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp">
       <Filter>Implementations\Interface\Widget\Scoreboard</Filter>
     </ClCompile>
-    <ClCompile Include="src\Implementations\Tables\TextureTable.cpp">
-      <Filter>Implementations\Tables</Filter>
-    </ClCompile>
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp">
       <Filter>Implementations\Flipbook</Filter>
     </ClCompile>
@@ -133,9 +130,6 @@
     <Filter Include="Headers\Tables\FontTable">
       <UniqueIdentifier>{e0bfc51f-f49f-4275-89bf-58f7e7be6f42}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Headers\Tables\TextureTable">
-      <UniqueIdentifier>{e26d17d8-7e11-4599-98ee-c42ae5c16a5d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Functions\Math">
       <UniqueIdentifier>{7cfc7ee5-2829-4651-8048-baa9a6832e08}</UniqueIdentifier>
     </Filter>
@@ -230,12 +224,6 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Tables\FontTable\FontTableDictionary.h">
       <Filter>Headers\Tables\FontTable</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Tables\TextureTable\TextureTable.h">
-      <Filter>Headers\Tables\TextureTable</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Tables\TextureTable\TextureTableDictionary.h">
-      <Filter>Headers\Tables\TextureTable</Filter>
     </ClInclude>
     <ClInclude Include="src\Headers\Math\Component\Component.h">
       <Filter>Headers\Math\Component</Filter>

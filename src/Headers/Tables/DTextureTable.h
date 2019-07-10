@@ -21,7 +21,7 @@ class DTextureTable
 	friend class Flipbook;
 public:
 	static const sf::Texture& getTexture(const std::string index); // хз
-	static const const DTexture& get(const std::string index);
+	static const DTexture& get(const std::string index);
 	static void load(const std::string index);
 	static void loadAll();
 	static void unload(const std::string index);

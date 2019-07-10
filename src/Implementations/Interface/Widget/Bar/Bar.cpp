@@ -2,8 +2,8 @@
 
 Bar::Bar()
 {
-	bar.assignTexture(TTD::TextureEmpty);
-	background.assignTexture(TTD::TextureEmpty);
+	bar.assignTexture("Empty");
+	background.assignTexture("Empty");
 	min = 0.f;
 	max = 1.f;
 	current = nullptr;

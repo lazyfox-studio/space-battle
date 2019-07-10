@@ -2,7 +2,7 @@
 
 Button::base::base() : Widget()
 {
-	textureIndexes = { TTD::TextureEmpty, TTD::TextureEmpty, TTD::TextureEmpty, TTD::TextureEmpty };
+	textureIndexes = { "Empty", "Empty", "Empty", "Empty" };
 	x = y = 0.f;
 	btnState = state::def;
 	setState(state::def);
@@ -56,7 +56,7 @@ Button::state Button::base::checkState(float mouse_x, float mouse_y, bool mouse_
 void Button::base::setState(state state_)
 {
 	btnState = state_;
-	if (textureIndexes[btnState] != TTD::TextureEmpty)
+	if (textureIndexes[btnState] != "Empty")
 		btn.assignTexture(textureIndexes[btnState]);
 	else
 		btn.assignTexture(textureIndexes[state::def]);

@@ -1,14 +1,15 @@
 ﻿#pragma once
 
 #include <SFML/Graphics.hpp>
-#include "Tables/TextureTable/TextureTable.h"
+#include <string>
+#include "Tables/DTextureTable.h"
 
 // Мультиспрайт (спрайт с покадровой анимацией)
 class Flipbook
 {
 protected:
-	typedef TextureTableDictionary TTD;
-	TTD        index;         // Номер текстуры в таблице
+	typedef std::string TTD;
+	TTD        index;         // Индекс текстуры в таблице
     sf::Sprite sprite;        // Фрейм-контейнер
     unsigned   frameWidth;    // Ширина кадра
     unsigned   frameHeight;   // Высота кадра

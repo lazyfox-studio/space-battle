@@ -145,7 +145,6 @@
     <ClCompile Include="src\Implementations\LuaScript\LuaScript.cpp" />
     <ClCompile Include="src\Implementations\Tables\DTextureTable.cpp" />
     <ClCompile Include="src\Implementations\Tables\FontTable.cpp" />
-    <ClCompile Include="src\Implementations\Tables\TextureTable.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -177,8 +176,6 @@
     <ClInclude Include="src\Headers\Tables\DTextureTable.h" />
     <ClInclude Include="src\Headers\Tables\FontTable\FontTable.h" />
     <ClInclude Include="src\Headers\Tables\FontTable\FontTableDictionary.h" />
-    <ClInclude Include="src\Headers\Tables\TextureTable\TextureTable.h" />
-    <ClInclude Include="src\Headers\Tables\TextureTable\TextureTableDictionary.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

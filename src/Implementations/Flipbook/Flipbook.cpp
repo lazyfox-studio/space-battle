@@ -1,6 +1,4 @@
 #include "Flipbook/Flipbook.h"
-#include "..\..\Headers\Flipbook\Flipbook.h"
-
 void Flipbook::updateTextureRect()
 {
 	sprite.setTextureRect(sf::IntRect(frameWidth * frameCurrent, 0, frameWidth, frameHeight));
@@ -8,11 +6,11 @@ void Flipbook::updateTextureRect()
 
 Flipbook::Flipbook()
 {
-	index = TTD::TextureEmpty;
+	index = "Empty";
 	frameWidth = frameHeight = 0U;
 	frameCount = frameCurrent = 0U;
 	isVisible = true;
-	sprite.setTexture(TextureTable::texture[index]);
+	sprite.setTexture(DTextureTable::getTexture(index));
 	updateTextureRect();
 }
 
@@ -24,19 +22,20 @@ Flipbook::Flipbook(const Flipbook& temp)
 	frameCount = temp.frameCount;
 	frameCurrent = temp.frameCurrent;
 	isVisible = temp.isVisible;
-	sprite.setTexture(TextureTable::texture[index]);
+	sprite.setTexture(DTextureTable::getTexture(index));
 	updateTextureRect();
 }
 
 Flipbook::Flipbook(TTD index_)
 {
+	const DTexture& textureData = DTextureTable::get(index);
 	index = index_;
-	frameWidth = TextureTable::frameWidth[index];
-	frameHeight = TextureTable::frameHeight[index];
-	frameCount = TextureTable::frameCount[index];
+	frameWidth = textureData.width;
+	frameHeight = textureData.height;
+	frameCount = textureData.frames;
 	frameCurrent = 0U;
 	isVisible = true;
-	sprite.setTexture(TextureTable::texture[index]);
+	sprite.setTexture(textureData.texture);
 	updateTextureRect();
 }
 
@@ -62,12 +61,13 @@ sf::Vector2f Flipbook::getPosition() const
 
 void Flipbook::assignTexture(TTD index_)
 {
+	const DTexture& textureData = DTextureTable::get(index);
 	index = index_;
-	frameWidth = TextureTable::frameWidth[index];
-	frameHeight = TextureTable::frameHeight[index];
-	frameCount = TextureTable::frameCount[index];
+	frameWidth = textureData.width;
+	frameHeight = textureData.height;
+	frameCount = textureData.frames;
 	frameCurrent = 0U;
-	sprite.setTexture(TextureTable::texture[index]);
+	sprite.setTexture(textureData.texture);
 	updateTextureRect();
 }
 

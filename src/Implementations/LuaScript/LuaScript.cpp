@@ -12,9 +12,10 @@ LuaScript::LuaScript()
 
 LuaScript::LuaScript(const std::string filename_)
 {
-	if (luaL_loadfile(L, filename.c_str()) || lua_pcall(L, 0, 0, 0)) {
+	if (luaL_loadfile(L, filename_.c_str()))
 		return;
-	}
+	else if (lua_pcall(L, 0, 0, 0))
+		return;
 	states++;
 	filename = filename_;
 }

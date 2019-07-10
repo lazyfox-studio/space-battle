@@ -35,7 +35,7 @@ namespace Button
 	class base : public ::Widget
 	{
 	protected:
-		typedef TextureTableDictionary TTD;
+		typedef std::string TTD;
 		typedef void* EventHadlerParam;
 		typedef void(*EventHandler)(EventHadlerParam);
 		state btnState;
