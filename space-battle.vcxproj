@@ -135,6 +135,8 @@
     <ClCompile Include="src\Functions\Physic\Physic.cpp" />
     <ClCompile Include="src\Implementations\Actor\Actor.cpp" />
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp" />
+    <ClCompile Include="src\Implementations\Interface\Menu\Menu.cpp" />
+    <ClCompile Include="src\Implementations\Interface\Menu\MenuPage.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Bar\Bar.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Button\Button.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Icon\Icon.cpp" />
@@ -157,6 +159,8 @@
     <ClInclude Include="src\Headers\Global\WindowControl.h" />
     <ClInclude Include="src\Headers\Global\WindowCorners.h" />
     <ClInclude Include="src\Headers\Interface\DialogWindow\DialogWindow.h" />
+    <ClInclude Include="src\Headers\Interface\Menu\Menu.h" />
+    <ClInclude Include="src\Headers\Interface\Menu\MenuPage.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Bar\Bar.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Button\Button.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Decoration\Decoration.h" />

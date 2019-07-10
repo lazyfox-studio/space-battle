@@ -35,6 +35,12 @@
     <ClCompile Include="src\Implementations\Interface\Widget\Icon\Icon.cpp">
       <Filter>Implementations\Interface\Widget\Icon</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Interface\Menu\Menu.cpp">
+      <Filter>Implementations\Interface\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Implementations\Interface\Menu\MenuPage.cpp">
+      <Filter>Implementations\Interface\Menu</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -145,6 +151,12 @@
     <Filter Include="Headers\Interface\Widget\Icon">
       <UniqueIdentifier>{e3df9bb7-cfad-4218-b94a-67f4a2a9d83a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers\Interface\Menu">
+      <UniqueIdentifier>{ebfaee2f-09d0-446b-a207-69202ad02971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Interface\Menu">
+      <UniqueIdentifier>{567b8912-b601-4ba0-8849-bf5c3a9a71ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -224,6 +236,12 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Interface\Widget\Icon\Icon.h">
       <Filter>Headers\Interface\Widget\Icon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Interface\Menu\Menu.h">
+      <Filter>Headers\Interface\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Interface\Menu\MenuPage.h">
+      <Filter>Headers\Interface\Menu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
