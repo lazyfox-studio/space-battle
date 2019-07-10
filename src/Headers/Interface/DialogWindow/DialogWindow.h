@@ -16,7 +16,7 @@ protected:
     unsigned width;
 
     //Ёлементы окна
-    std::vector<Button::base> buttons;
+    std::vector<Button::base*> buttons;
     //std::vector<TextSpace> Text;
 
 public:
