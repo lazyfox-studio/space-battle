@@ -1,7 +1,6 @@
 ﻿#pragma once
 
 #include <SFML/Graphics.hpp>
-#include "Global/WindowControl.h"
 
 // Виджет (элемент графического интерфейса)
 class Widget

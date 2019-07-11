@@ -2,9 +2,9 @@
 
 textures = {
 	["Empty"] = {
-		path   = "Textures/empty.png",
-		width  = 1,
-		height = 1,
+		path   = "E:/Source/space-battle/data/Textures/empty.png",
+		width  = 122,
+		height = 241,
 		frames = 1
 	}
 }

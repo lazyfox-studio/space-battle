@@ -161,7 +161,6 @@
     <ClInclude Include="src\Headers\Flipbook\Flipbook.h" />
     <ClInclude Include="src\Headers\Global\InputControl.h" />
     <ClInclude Include="src\Headers\Global\ViewControl.h" />
-    <ClInclude Include="src\Headers\Global\WindowControl.h" />
     <ClInclude Include="src\Headers\Global\WindowCorners.h" />
     <ClInclude Include="src\Headers\Interface\DialogWindow\DialogWindow.h" />
     <ClInclude Include="src\Headers\Interface\Menu\Menu.h" />

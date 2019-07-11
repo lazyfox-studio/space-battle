@@ -201,9 +201,6 @@
     <ClInclude Include="src\Headers\Global\InputControl.h">
       <Filter>Headers\Global</Filter>
     </ClInclude>
-    <ClInclude Include="src\Headers\Global\WindowControl.h">
-      <Filter>Headers\Global</Filter>
-    </ClInclude>
     <ClInclude Include="src\Headers\Global\ViewControl.h">
       <Filter>Headers\Global</Filter>
     </ClInclude>

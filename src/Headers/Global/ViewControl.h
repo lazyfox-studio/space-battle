@@ -20,8 +20,8 @@ public:
     ~ViewControl();
 
     //Движение камеры
-    void addPosition(float x_, float y_);
-    void addPosition(sf::Vector2f vector);
+    void move(float x_, float y_);
+    void move(sf::Vector2f vector);
     void setPosition(float x_, float y_);
     void setPosition(sf::Vector2f vector);
     void setScale(float scale_);
