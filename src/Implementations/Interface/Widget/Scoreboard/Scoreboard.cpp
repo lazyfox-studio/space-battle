@@ -2,11 +2,11 @@
 
 Scoreboard::Scoreboard()
 {
-	setFont(FTD::FontEmpty);
+	setFont("Empty");
 	setCounter(0);
 }
 
-Scoreboard::Scoreboard(FTD index_, const std::string& str_, int counter_)
+Scoreboard::Scoreboard(std::string index_, const std::string& str_, int counter_)
 {
 	setFont(index_);
 	setText(str_);
@@ -58,11 +58,11 @@ void Scoreboard::setText(const std::string& strDescription_)
 	textDescription.setString(strDescription.c_str());
 }
 
-void Scoreboard::setFont(FTD index_)
+void Scoreboard::setFont(std::string index_)
 {
 	index = index_;
-	textDescription.setFont(FontTable::font[index]);
-	textCounter.setFont(FontTable::font[index]);
+	textDescription.setFont(FontTable::fonts[index].font);
+	textCounter.setFont(FontTable::fonts[index].font);
 
 }
 

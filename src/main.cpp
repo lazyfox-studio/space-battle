@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include "Tables/DTextureTable.h"
+#include "Tables/TextureTable.h"
 #include "Actor/Actor.h"
 
 int main()
@@ -10,8 +10,8 @@ int main()
 	shape.setFillColor(sf::Color::Green);
 
 	// test
-	DTextureTable::load("Empty");
-	DTexture t = DTextureTable::get("Empty");
+	TextureTable::load("Empty");
+	Texture t = TextureTable::get("Empty");
 	std::cout << t.width;
 
     Actor tester(5, 5, 10, 10, 0, 0, false, false, sf::Vector2f(0, 0), "Spaceship1");

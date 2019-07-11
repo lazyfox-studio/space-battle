@@ -41,9 +41,6 @@
     <ClCompile Include="src\Implementations\LuaScript\LuaScript.cpp">
       <Filter>Implementations\LuaScript</Filter>
     </ClCompile>
-    <ClCompile Include="src\Implementations\Tables\DTextureTable.cpp">
-      <Filter>Implementations\Tables</Filter>
-    </ClCompile>
     <ClCompile Include="src\Implementations\Scene\Level.cpp">
       <Filter>Implementations\Scene</Filter>
     </ClCompile>
@@ -55,6 +52,9 @@
     </ClCompile>
     <ClCompile Include="src\Implementations\Math\Component\Rectangle\Rectangle.cpp">
       <Filter>Implementations\Math\Component\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Implementations\Tables\TextureTable.cpp">
+      <Filter>Implementations\Tables</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -138,9 +138,6 @@
     </Filter>
     <Filter Include="Functions\Physic">
       <UniqueIdentifier>{2323ca53-d492-4bca-9503-8b286a642d32}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Headers\Tables\FontTable">
-      <UniqueIdentifier>{e0bfc51f-f49f-4275-89bf-58f7e7be6f42}</UniqueIdentifier>
     </Filter>
     <Filter Include="Functions\Math">
       <UniqueIdentifier>{7cfc7ee5-2829-4651-8048-baa9a6832e08}</UniqueIdentifier>
@@ -252,12 +249,6 @@
     <ClInclude Include="src\Headers\Constants.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="src\Headers\Tables\FontTable\FontTable.h">
-      <Filter>Headers\Tables\FontTable</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Tables\FontTable\FontTableDictionary.h">
-      <Filter>Headers\Tables\FontTable</Filter>
-    </ClInclude>
     <ClInclude Include="src\Headers\Math\Component\Component.h">
       <Filter>Headers\Math\Component</Filter>
     </ClInclude>
@@ -279,7 +270,10 @@
     <ClInclude Include="src\Headers\LuaScript\LuaScript.h">
       <Filter>Headers\LuaScript</Filter>
     </ClInclude>
-    <ClInclude Include="src\Headers\Tables\DTextureTable.h">
+    <ClInclude Include="src\Headers\Tables\TextureTable.h">
+      <Filter>Headers\Tables</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Tables\FontTable.h">
       <Filter>Headers\Tables</Filter>
     </ClInclude>
   </ItemGroup>

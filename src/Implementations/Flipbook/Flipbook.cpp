@@ -10,7 +10,7 @@ Flipbook::Flipbook()
 	frameWidth = frameHeight = 0U;
 	frameCount = frameCurrent = 0U;
 	isVisible = true;
-	sprite.setTexture(DTextureTable::getTexture(index));
+	sprite.setTexture(TextureTable::getTexture(index));
 	updateTextureRect();
 }
 
@@ -22,13 +22,13 @@ Flipbook::Flipbook(const Flipbook& temp)
 	frameCount = temp.frameCount;
 	frameCurrent = temp.frameCurrent;
 	isVisible = temp.isVisible;
-	sprite.setTexture(DTextureTable::getTexture(index));
+	sprite.setTexture(TextureTable::getTexture(index));
 	updateTextureRect();
 }
 
 Flipbook::Flipbook(std::string index_)
 {
-	const DTexture& textureData = DTextureTable::get(index);
+	const Texture& textureData = TextureTable::get(index);
 	index = index_;
 	frameWidth = textureData.width;
 	frameHeight = textureData.height;
@@ -61,7 +61,7 @@ sf::Vector2f Flipbook::getPosition() const
 
 void Flipbook::assignTexture(std::string index_)
 {
-	const DTexture& textureData = DTextureTable::get(index);
+	const Texture& textureData = TextureTable::get(index);
 	index = index_;
 	frameWidth = textureData.width;
 	frameHeight = textureData.height;

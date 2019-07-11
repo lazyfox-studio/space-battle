@@ -151,7 +151,7 @@
     <ClCompile Include="src\Implementations\Math\Component\Ellipse\Ellipse.cpp" />
     <ClCompile Include="src\Implementations\Math\Component\Rectangle\Rectangle.cpp" />
     <ClCompile Include="src\Implementations\Scene\Level.cpp" />
-    <ClCompile Include="src\Implementations\Tables\DTextureTable.cpp" />
+    <ClCompile Include="src\Implementations\Tables\TextureTable.cpp" />
     <ClCompile Include="src\Implementations\Tables\FontTable.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
@@ -180,9 +180,8 @@
     <ClInclude Include="src\Headers\Math\Component\Ellipse\Ellipse.h" />
     <ClInclude Include="src\Headers\Math\Component\Rectangle\Rectangle.h" />
     <ClInclude Include="src\Headers\Scene\Level.h" />
-    <ClInclude Include="src\Headers\Tables\DTextureTable.h" />
-    <ClInclude Include="src\Headers\Tables\FontTable\FontTable.h" />
-    <ClInclude Include="src\Headers\Tables\FontTable\FontTableDictionary.h" />
+    <ClInclude Include="src\Headers\Tables\FontTable.h" />
+    <ClInclude Include="src\Headers\Tables\TextureTable.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config\Levels\Level1.lua" />

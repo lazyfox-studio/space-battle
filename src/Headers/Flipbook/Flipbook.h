@@ -2,7 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <string>
-#include "Tables/DTextureTable.h"
+#include "Tables/TextureTable.h"
 
 // Мультиспрайт (спрайт с покадровой анимацией)
 class Flipbook

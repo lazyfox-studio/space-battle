@@ -5,7 +5,7 @@
 #include <map>
 #include <string>
 
-struct DTexture
+struct Texture
 {
 	sf::Texture texture;
 	unsigned width = 0U;
@@ -13,15 +13,15 @@ struct DTexture
 	unsigned frames = 1U;
 };
 
-class DTextureTable
+class TextureTable
 {
-	static std::map<std::string, DTexture> textures;
-	DTextureTable();
-	DTextureTable(const DTextureTable&);
+	static std::map<std::string, Texture> textures;
+	TextureTable();
+	TextureTable(const TextureTable&);
 	friend class Flipbook;
 public:
 	static const sf::Texture& getTexture(const std::string index); // хз
-	static const DTexture& get(const std::string index);
+	static const Texture& get(const std::string index);
 	static void load(const std::string index);
 	static void loadAll();
 	static void unload(const std::string index);
