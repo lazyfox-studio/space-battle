@@ -6,12 +6,10 @@
 #include <fstream>
 #include "SFML/Graphics.hpp"
 #include "Global/ViewControl.h"
-#include "Actor/Actor.h"
-#include "Actor/Pawn/Pawn.h"
 #include "Actor/Pawn/Character/Character.h"
 
 //Уровень (управляет тем какие объекты есть на карте, какой фон и т.п.)
-/*class Level
+class Level
 {
 protected:
     //Состояние уровня
@@ -21,7 +19,7 @@ protected:
     sf::RenderWindow* window;           //Окно в котором рисуется уровень
     std::vector<ViewControl*> views;    //Все View'ы на уровне
     std::vector<Actor*> actors;         //Все объекты (надо будет разбить с помощью введения поля "группа"
-    std::vector<Pawn&> pawns;           //Все подвижные объекты
+    std::vector<Pawn*> pawns;           //Все подвижные объекты
     std::vector<Character*> characters; //Все игроки
     
     //Массивы функций
@@ -39,4 +37,4 @@ public:
     void resume();  //Запуск уровня
     void stop();   //Остановка уровня и закрытие
     void play();   //Проиграть уровень
-};*/
+};

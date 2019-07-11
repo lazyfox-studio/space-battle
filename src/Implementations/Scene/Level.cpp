@@ -2,7 +2,7 @@
 
 #include "Scene/Level.h"
 
-/*Level::Level(sf::RenderWindow* window_, ViewControl* view, std::string path)
+Level::Level(sf::RenderWindow* window_, ViewControl* view, std::string path)
 {
     window = window_;
     views.push_back(view);
@@ -37,4 +37,4 @@ void Level::play()
     {
 
     }
-}*/
+}
