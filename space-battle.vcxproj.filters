@@ -47,6 +47,15 @@
     <ClCompile Include="src\Implementations\Scene\Level.cpp">
       <Filter>Implementations\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Math\Component\Ellipse\Ellipse.cpp">
+      <Filter>Implementations\Math\Component\Ellipse</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Implementations\Math\Component\Component.cpp">
+      <Filter>Implementations\Math\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Implementations\Math\Component\Rectangle\Rectangle.cpp">
+      <Filter>Implementations\Math\Component\Rectangle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -174,6 +183,18 @@
     </Filter>
     <Filter Include="Implementations\Scene">
       <UniqueIdentifier>{7e5c7896-15c2-4fd2-8bea-d8703c700d55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Math">
+      <UniqueIdentifier>{ddb9f2ec-7b81-490a-a800-85c2f3003ad8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Math\Component">
+      <UniqueIdentifier>{c2833bd2-4ebe-4d2e-a6cf-6e6527ccf787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Math\Component\Ellipse">
+      <UniqueIdentifier>{94db324f-549a-462e-8777-762e47c88a75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Math\Component\Rectangle">
+      <UniqueIdentifier>{9ea9405f-bd98-4cc2-aebe-aa1fa3671835}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

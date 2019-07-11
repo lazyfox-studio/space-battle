@@ -5,7 +5,7 @@
 // Контроллер управления персонажем (привязывается к Charachter)
 class InputControl
 {
-    Character* slave;
+   // Character* slave;
     
 public:
     //Control(const Character& slave_);

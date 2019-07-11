@@ -2,6 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <cmath>
+#include <string>
 #include "Constants.h"
 #include "Flipbook/Flipbook.h"
 #include "Math/Component/Component.h"
@@ -12,8 +13,9 @@
 class Actor
 {
 protected:
+    typedef std::string TTD;
     // Компонента тела
-    Component* cmp;
+    Component *component;
 
     // Параметры тела
     float m;      // Масса
@@ -32,7 +34,7 @@ protected:
 public:
     //Конструкторы и Деструкторы
     Actor();
-    Actor(float x_, float y_, float height_, float width_, unsigned componentType, float m_, bool attractable_, bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_);
+    Actor(float x_, float y_, float height_, float width_, unsigned componentType, float m_, bool attractable_, bool touchable_, const sf::Vector2f velocity_, const TTD texture_);
     Actor(const Actor& temp);
     ~Actor();
 

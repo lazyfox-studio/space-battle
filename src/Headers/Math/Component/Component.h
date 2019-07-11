@@ -22,4 +22,6 @@ public:
     Component(const Component& temp);
     Component(float x_, float y_, float height_, float width_);
     ~Component();
+
+    Component& operator=(const Component& temp);
 };

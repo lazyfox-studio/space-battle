@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Tables/DTextureTable.h"
+#include "Actor/Actor.h"
 
 int main()
 {
@@ -13,6 +14,8 @@ int main()
 	DTexture t = DTextureTable::get("Empty");
 	std::cout << t.width;
 
+    //Actor tester(5, 5, 10, 10, 0, 0, false, false, sf::Vector2f(0, 0), "Empty");
+
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -23,6 +26,7 @@ int main()
 		}
 
 		window.clear();
+        tester.drawIn(window);
 		window.draw(shape);
 		window.display();
 	}

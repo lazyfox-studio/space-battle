@@ -11,7 +11,7 @@
 #include "Actor/Pawn/Character/Character.h"
 
 //Уровень (управляет тем какие объекты есть на карте, какой фон и т.п.)
-class Level
+/*class Level
 {
 protected:
     //Состояние уровня
@@ -39,4 +39,4 @@ public:
     void resume();  //Запуск уровня
     void stop();   //Остановка уровня и закрытие
     void play();   //Проиграть уровень
-};
+};*/

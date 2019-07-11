@@ -4,35 +4,29 @@
 
 Actor::Actor()
 {
-	cmp->x = 0;
-	cmp->y = 0;
-	cmp->height = 0;
-	cmp->width = 0;
+    component = new Component;
     m = 0;
     attractable = false;
     touchable = false;
     velocity = sf::Vector2f(0,0);
     acceleration = sf::Vector2f(0, 0);
-    //Что-то со спрайтом
+    sprite.assignTexture("Empty");
 }
 
 Actor::Actor(float x_, float y_, float height_, float width_, unsigned componentType, float m_, bool attractable_,
-	bool touchable_, const sf::Vector2f velocity_, const Flipbook sprite_)
+	bool touchable_, const sf::Vector2f velocity_, const TTD texture_)
 {
-	cmp->x = x_;
-	cmp->y = y_;
-	cmp->height = height_;
-	cmp->width = width_;
+    component = new Component(x_,y_,height_,width_);
     m = m_;
     attractable = attractable_;
     touchable = touchable_;
     velocity = velocity_;
-    sprite = sprite_;
+    sprite.assignTexture(texture_);
 }
 
 Actor::Actor(const Actor& temp)
 {
-	*cmp = *(temp.cmp);
+	*component = *(temp.component);
     m = temp.m;
     attractable = temp.attractable;
     touchable = temp.touchable;
@@ -48,22 +42,22 @@ Actor::~Actor()
 
 float Actor::getX() const
 {
-    return cmp->x;
+    return component->x;
 }
 
 float Actor::getY() const
 {
-    return cmp->y;
+    return component->y;
 }
 
 float Actor::getHeight() const
 {
-    return cmp->height;
+    return component->height;
 }
 
 float Actor::getWidth() const
 {
-    return cmp->width;
+    return component->width;
 }
 
 float Actor::getM() const
@@ -83,13 +77,13 @@ bool Actor::isTouchable() const
 
 float Actor::distance(const Actor& temp) const
 {
-	return sqrt((cmp->x - temp.cmp->x) * (cmp->x - temp.cmp->x) + (cmp->y - temp.cmp->y) * (cmp->y - temp.cmp->y));
+	return sqrt((component->x - temp.component->x) * (component->x - temp.component->x) + (component->y - temp.component->y) * (component->y - temp.component->y));
 }
 
 void Actor::setPosition(float x_, float y_, const sf::Vector2f velocity_)
 {
-    cmp->x = x_;
-	cmp->y = y_;
+    component->x = x_;
+	component->y = y_;
     velocity = velocity_;
 }
 

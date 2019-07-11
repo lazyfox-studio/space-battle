@@ -147,6 +147,9 @@
     <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Widget.cpp" />
     <ClCompile Include="src\Implementations\LuaScript\LuaScript.cpp" />
+    <ClCompile Include="src\Implementations\Math\Component\Component.cpp" />
+    <ClCompile Include="src\Implementations\Math\Component\Ellipse\Ellipse.cpp" />
+    <ClCompile Include="src\Implementations\Math\Component\Rectangle\Rectangle.cpp" />
     <ClCompile Include="src\Implementations\Scene\Level.cpp" />
     <ClCompile Include="src\Implementations\Tables\DTextureTable.cpp" />
     <ClCompile Include="src\Implementations\Tables\FontTable.cpp" />
