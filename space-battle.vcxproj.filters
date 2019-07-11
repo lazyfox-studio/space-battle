@@ -44,6 +44,9 @@
     <ClCompile Include="src\Implementations\Tables\DTextureTable.cpp">
       <Filter>Implementations\Tables</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Scene\Level.cpp">
+      <Filter>Implementations\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -168,6 +171,9 @@
     </Filter>
     <Filter Include="config\Tables">
       <UniqueIdentifier>{e7f66315-7de9-45ed-aa07-5ab1030c1d1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Scene">
+      <UniqueIdentifier>{7e5c7896-15c2-4fd2-8bea-d8703c700d55}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
