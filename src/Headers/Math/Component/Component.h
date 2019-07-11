@@ -1,9 +1,6 @@
 ﻿#pragma once
 
-#include "Actor/Actor.h"
-
 // Класс компоненты (используется для коллизий)
-
 class Component
 {
 protected:

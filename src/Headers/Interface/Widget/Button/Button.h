@@ -35,18 +35,18 @@ namespace Button
 	class base : public ::Widget
 	{
 	protected:
-		typedef std::string TTD;
+		 
 		typedef void* EventHadlerParam;
 		typedef void(*EventHandler)(EventHadlerParam);
 		state btnState;
 		Flipbook btn;
-		std::array<TTD, 4> textureIndexes;
+		std::array<std::string, 4> textureIndexes;
 		EventHandler handler;
 		EventHadlerParam handlerParam;
 
 	public:
 		base();
-		base(std::initializer_list<TTD> textureIndexes_);
+		base(std::initializer_list<std::string> textureIndexes_);
 		virtual ~base();
 
 		state getState();
@@ -90,7 +90,7 @@ namespace Button
 		icon();
 		~icon();
 
-		void assignIcon(TTD index);
+		void assignIcon(std::string index);
 		void setPosition(sf::Vector2f position);
 		void drawIn(sf::RenderWindow& window);
 	};

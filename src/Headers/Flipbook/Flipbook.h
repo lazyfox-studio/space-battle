@@ -8,8 +8,8 @@
 class Flipbook
 {
 protected:
-	typedef std::string TTD;
-	TTD        index;         // Индекс текстуры в таблице
+	 
+	std::string        index;         // Индекс текстуры в таблице
     sf::Sprite sprite;        // Фрейм-контейнер
     unsigned   frameWidth;    // Ширина кадра
     unsigned   frameHeight;   // Высота кадра
@@ -24,7 +24,7 @@ public:
     //Конструкторы
     Flipbook();
     Flipbook(const Flipbook& temp);
-    Flipbook(TTD index_);
+    Flipbook(std::string index_);
 
 	// Аксессоры
 	bool visible() const;
@@ -34,7 +34,7 @@ public:
 	sf::Vector2f getPosition() const;
 
     //Обновление текстуры
-    void assignTexture(TTD index_);
+    void assignTexture(std::string index_);
 
 	// Модификация и перемещение
 	void setPosition(sf::Vector2f position);

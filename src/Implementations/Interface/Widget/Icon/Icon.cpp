@@ -16,7 +16,7 @@ Icon::Icon(const Icon& temp)
     offFlipbook = temp.offFlipbook;
 }
 
-Icon::Icon(bool* current_, TTD onTexture, TTD offTexture)
+Icon::Icon(bool* current_, std::string onTexture, std::string offTexture)
 {
     current = current_;
     onFlipbook.assignTexture(onTexture);

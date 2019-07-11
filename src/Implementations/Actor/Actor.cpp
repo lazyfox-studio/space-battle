@@ -14,7 +14,7 @@ Actor::Actor()
 }
 
 Actor::Actor(float x_, float y_, float height_, float width_, unsigned componentType, float m_, bool attractable_,
-	bool touchable_, const sf::Vector2f velocity_, const TTD texture_)
+	bool touchable_, const sf::Vector2f velocity_, const std::string texture_)
 {
     component = new Component(x_,y_,height_,width_);
     m = m_;

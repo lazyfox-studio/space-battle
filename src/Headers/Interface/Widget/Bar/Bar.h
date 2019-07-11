@@ -7,15 +7,15 @@
 // Полоса прогресса
 class Bar : Widget
 {
-	typedef std::string TTD;
+	 
 	Flipbook bar, background;
 	float min, max;
 	float* current;
 public:
 	Bar();
 	Bar(const Bar& temp);
-	Bar(float min_ = 0.f, float max_ = 1.f, TTD barTexture = "Empty", TTD backgroundTexture = "Empty");
-	explicit Bar(float* current_, float min_ = 0.f, float max_ = 1.f, TTD barTexture = "Empty", TTD backgroundTexture = "Empty");
+	Bar(float min_ = 0.f, float max_ = 1.f, std::string barTexture = "Empty", std::string backgroundTexture = "Empty");
+	explicit Bar(float* current_, float min_ = 0.f, float max_ = 1.f, std::string barTexture = "Empty", std::string backgroundTexture = "Empty");
 	~Bar();
 
 	float getMin() const;

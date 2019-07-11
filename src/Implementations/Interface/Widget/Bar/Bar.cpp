@@ -18,7 +18,7 @@ Bar::Bar(const Bar& temp)
 	current = temp.current;
 }
 
-Bar::Bar(float min_, float max_, TTD barTexture, TTD backgroundTexture)
+Bar::Bar(float min_, float max_, std::string barTexture, std::string backgroundTexture)
 {
 	bar.assignTexture(barTexture);
 	background.assignTexture(backgroundTexture);
@@ -27,7 +27,7 @@ Bar::Bar(float min_, float max_, TTD barTexture, TTD backgroundTexture)
 	current = nullptr;
 }
 
-Bar::Bar(float* current_, float min_, float max_, TTD barTexture, TTD backgroundTexture)
+Bar::Bar(float* current_, float min_, float max_, std::string barTexture, std::string backgroundTexture)
 	: Bar(min_, max_, barTexture, backgroundTexture)
 {
 	current = current_;

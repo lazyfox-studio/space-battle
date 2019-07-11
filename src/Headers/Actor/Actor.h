@@ -13,7 +13,7 @@
 class Actor
 {
 protected:
-    typedef std::string TTD;
+     
     // Компонента тела
     Component *component;
 
@@ -34,7 +34,7 @@ protected:
 public:
     //Конструкторы и Деструкторы
     Actor();
-    Actor(float x_, float y_, float height_, float width_, unsigned componentType, float m_, bool attractable_, bool touchable_, const sf::Vector2f velocity_, const TTD texture_);
+    Actor(float x_, float y_, float height_, float width_, unsigned componentType, float m_, bool attractable_, bool touchable_, const sf::Vector2f velocity_, const std::string texture_);
     Actor(const Actor& temp);
     ~Actor();
 

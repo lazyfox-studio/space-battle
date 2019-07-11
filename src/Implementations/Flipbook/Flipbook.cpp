@@ -26,7 +26,7 @@ Flipbook::Flipbook(const Flipbook& temp)
 	updateTextureRect();
 }
 
-Flipbook::Flipbook(TTD index_)
+Flipbook::Flipbook(std::string index_)
 {
 	const DTexture& textureData = DTextureTable::get(index);
 	index = index_;
@@ -59,7 +59,7 @@ sf::Vector2f Flipbook::getPosition() const
 	return sprite.getPosition();
 }
 
-void Flipbook::assignTexture(TTD index_)
+void Flipbook::assignTexture(std::string index_)
 {
 	const DTexture& textureData = DTextureTable::get(index);
 	index = index_;

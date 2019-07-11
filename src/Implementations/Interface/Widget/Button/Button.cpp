@@ -8,7 +8,7 @@ Button::base::base() : Widget()
 	setState(state::def);
 }
 
-Button::base::base(std::initializer_list<TTD> textureIndexes_) : base()
+Button::base::base(std::initializer_list<std::string> textureIndexes_) : base()
 {
 	if (textureIndexes_.size() < 1)
 		return;
@@ -159,7 +159,7 @@ Button::icon::~icon()
 	
 }
 
-void Button::icon::assignIcon(TTD index)
+void Button::icon::assignIcon(std::string index)
 {
 	iconSprite.assignTexture(index);
 }
