@@ -185,6 +185,9 @@
     <ClInclude Include="src\Headers\Tables\FontTable\FontTableDictionary.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="config\Levels\Level1.lua" />
+    <None Include="config\Tables\Fonts.lua" />
+    <None Include="config\Tables\Music.Lua" />
     <None Include="config\Tables\Textures.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

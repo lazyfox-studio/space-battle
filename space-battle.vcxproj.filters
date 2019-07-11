@@ -196,6 +196,9 @@
     <Filter Include="Implementations\Math\Component\Rectangle">
       <UniqueIdentifier>{9ea9405f-bd98-4cc2-aebe-aa1fa3671835}</UniqueIdentifier>
     </Filter>
+    <Filter Include="config\Levels">
+      <UniqueIdentifier>{91c5db0d-c0b2-4c19-bf57-793363df3cfc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -283,6 +286,15 @@
   <ItemGroup>
     <None Include="config\Tables\Textures.lua">
       <Filter>config\Tables</Filter>
+    </None>
+    <None Include="config\Tables\Fonts.lua">
+      <Filter>config\Tables</Filter>
+    </None>
+    <None Include="config\Tables\Music.Lua">
+      <Filter>config\Tables</Filter>
+    </None>
+    <None Include="config\Levels\Level1.lua">
+      <Filter>config\Levels</Filter>
     </None>
   </ItemGroup>
 </Project>

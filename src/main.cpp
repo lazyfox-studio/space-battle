@@ -14,7 +14,7 @@ int main()
 	DTexture t = DTextureTable::get("Empty");
 	std::cout << t.width;
 
-    Actor tester(5, 5, 10, 10, 0, 0, false, false, sf::Vector2f(0, 0), "Empty");
+    Actor tester(5, 5, 10, 10, 0, 0, false, false, sf::Vector2f(0, 0), "Spaceship1");
 
 	while (window.isOpen())
 	{
