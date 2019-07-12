@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Widget/Button/Button.h"
+#include "Interface/Widget/Button/Button.h"
 #include <vector>;
 
 //Диалоговое окно

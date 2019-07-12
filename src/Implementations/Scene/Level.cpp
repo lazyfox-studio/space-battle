@@ -11,29 +11,27 @@ Level::Level(sf::RenderWindow* window_, ViewControl* view, std::string path)
 
 Level::~Level()
 {
-    delete[] interactions;
-    delete[] modifications;
 }
 
 void Level::resume()
 {
-    status = 1;
+    isActive = 1;
 }
 
 void Level::pause()
 {
-    status = 0;
+	isActive = 0;
 }
 
 void Level::stop()
 {
-    status = 0;
+	isActive = 0;
     //Все, что нужно для остановки
 }
 
 void Level::play()
 {
-    if (status == 1)
+    if (isActive)
     {
 
     }

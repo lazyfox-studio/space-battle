@@ -3,7 +3,7 @@
 #include "Actor/Actor.h"
 #include "Constants.h"
 
-namespace Physic
+namespace Physics
 {
     //Ньютоновское притяжение
     void gravitation(Actor& a, Actor& b);

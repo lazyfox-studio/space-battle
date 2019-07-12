@@ -135,8 +135,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Functions\Distance.cpp" />
-    <ClCompile Include="src\Functions\Physic\Physic.cpp" />
+    <ClCompile Include="src\Functions\Physics\Physics.cpp" />
     <ClCompile Include="src\Implementations\Actor\Actor.cpp" />
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp" />
     <ClCompile Include="src\Implementations\Interface\Menu\Menu.cpp" />
@@ -157,8 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Constants.h" />
-    <ClInclude Include="src\Functions\Functions.h" />
-    <ClInclude Include="src\Functions\Physic\Physic.h" />
+    <ClInclude Include="src\Functions\Physics\Physics.h" />
     <ClInclude Include="src\Headers\Actor\Actor.h" />
     <ClInclude Include="src\Headers\Actor\Pawn\Character\Character.h" />
     <ClInclude Include="src\Headers\Actor\Pawn\Pawn.h" />

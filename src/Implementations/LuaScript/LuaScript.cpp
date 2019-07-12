@@ -2,12 +2,12 @@
 #include "..\..\Headers\LuaScript\LuaScript.h"
 
 unsigned LuaScript::states = 0U;
-lua_State* LuaScript::L = nullptr;
+//lua_State* LuaScript::L = nullptr;
 
 LuaScript::LuaScript()
 {
 	states++;
-	if (!L)
+	//if (!L)
 		L = luaL_newstate();
 }
 
@@ -22,11 +22,11 @@ LuaScript::LuaScript(const std::string filename_) : LuaScript()
 
 LuaScript::~LuaScript()
 {
-	if (--states == 0U)
-	{
+	//if (--states == 0U)
+	//{
 		lua_close(L);
 		L = nullptr;
-	}
+	//}
 }
 
 std::string LuaScript::getFilename() const

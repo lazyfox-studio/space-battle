@@ -10,7 +10,8 @@ extern "C" {
 
 class LuaScript
 {
-	static lua_State* L;
+	//static lua_State* L;
+	lua_State* L;
 	static unsigned states;
 	std::string filename;
 public:

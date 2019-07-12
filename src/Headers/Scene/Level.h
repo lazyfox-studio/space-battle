@@ -13,20 +13,18 @@ class Level
 {
 protected:
     //Состояние уровня
-    unsigned status; //0 - на пазе 1 - работает
+    bool isActive;
 
-    //Объекты уровня
-    sf::RenderWindow* window;           //Окно в котором рисуется уровень
-    std::vector<ViewControl*> views;    //Все View'ы на уровне
-    std::vector<Actor*> actors;         //Все объекты (надо будет разбить с помощью введения поля "группа"
-    std::vector<Pawn*> pawns;           //Все подвижные объекты
-    std::vector<Character*> characters; //Все игроки
+    // Объекты уровня
+    sf::RenderWindow* window;           // Окно, в котором рисуется уровень
+    std::vector<ViewControl*> views;    // Все View на уровне
+    std::vector<Actor*> actors;         // Все объекты (надо будет разбить с помощью введения поля "группа")
+    std::vector<Pawn*> pawns;           // Все подвижные объекты
+    std::vector<Character*> characters; // Все игроки
     
-    //Массивы функций
-    void (**interactions) (Actor& a, Actor& b); //Функции обрабатывающие взаимодействия объектов
-    unsigned interationsCount;
-    void(**modifications) (Actor& a);           //Функции преобразующие объекты
-    unsigned modificationsCount;
+    // Функции
+	std::vector<void(*)(Actor&, Actor&)> interactions; // Функции, обрабатывающие взаимодействия объектов
+	std::vector<void(*)(Actor&)> modifications;        // Функции, преобразующие объекты
 
 public:
     Level(sf::RenderWindow* window_, ViewControl* view, std::string path);

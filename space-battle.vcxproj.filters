@@ -2,9 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Functions\Distance.cpp">
-      <Filter>Functions</Filter>
-    </ClCompile>
     <ClCompile Include="src\Implementations\Actor\Actor.cpp">
       <Filter>Implementations\Actor</Filter>
     </ClCompile>
@@ -22,9 +19,6 @@
     </ClCompile>
     <ClCompile Include="src\Implementations\Interface\Widget\Bar\Bar.cpp">
       <Filter>Implementations\Interface\Widget\Bar</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Functions\Physic\Physic.cpp">
-      <Filter>Functions\Physic</Filter>
     </ClCompile>
     <ClCompile Include="src\Implementations\Tables\FontTable.cpp">
       <Filter>Implementations\Tables</Filter>
@@ -55,6 +49,9 @@
     </ClCompile>
     <ClCompile Include="src\Implementations\Tables\TextureTable.cpp">
       <Filter>Implementations\Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Functions\Physics\Physics.cpp">
+      <Filter>Functions\Physics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -136,9 +133,6 @@
     <Filter Include="Implementations\Interface\Widget\Bar">
       <UniqueIdentifier>{41a070cd-3e93-4206-ac3d-5787df20757f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Functions\Physic">
-      <UniqueIdentifier>{2323ca53-d492-4bca-9503-8b286a642d32}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Functions\Math">
       <UniqueIdentifier>{7cfc7ee5-2829-4651-8048-baa9a6832e08}</UniqueIdentifier>
     </Filter>
@@ -196,6 +190,9 @@
     <Filter Include="config\Levels">
       <UniqueIdentifier>{91c5db0d-c0b2-4c19-bf57-793363df3cfc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Functions\Physics">
+      <UniqueIdentifier>{2323ca53-d492-4bca-9503-8b286a642d32}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -222,9 +219,6 @@
     <ClInclude Include="src\Headers\Interface\Widget\Decoration\Decoration.h">
       <Filter>Headers\Interface\Widget\Decoration</Filter>
     </ClInclude>
-    <ClInclude Include="src\Functions\Functions.h">
-      <Filter>Functions</Filter>
-    </ClInclude>
     <ClInclude Include="src\Headers\Global\InputControl.h">
       <Filter>Headers\Global</Filter>
     </ClInclude>
@@ -242,9 +236,6 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Interface\Widget\Bar\Bar.h">
       <Filter>Headers\Interface\Widget\Bar</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Functions\Physic\Physic.h">
-      <Filter>Functions\Physic</Filter>
     </ClInclude>
     <ClInclude Include="src\Headers\Constants.h">
       <Filter>Headers</Filter>
@@ -275,6 +266,9 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Tables\FontTable.h">
       <Filter>Headers\Tables</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Functions\Physics\Physics.h">
+      <Filter>Functions\Physics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
