@@ -22,4 +22,5 @@ public:
 	std::string getFilename() const;
 	int execute(const std::string filename_);
 	luabridge::LuaRef getGlobal(const std::string varName);
+	luabridge::Namespace getGlobalNamespace(const std::string namespaceName);
 };

@@ -51,3 +51,10 @@ luabridge::LuaRef LuaScript::getGlobal(const std::string varName)
 		throw std::exception("File not executed.");
 	return luabridge::getGlobal(L, varName.c_str());
 }
+
+luabridge::Namespace LuaScript::getGlobalNamespace(const std::string namespaceName)
+{
+	if(filename.empty())
+		throw std::exception("File not executed.");
+	return luabridge::getGlobalNamespace(L);
+}

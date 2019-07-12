@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include <SFML/Graphics.hpp>
+#include "SFML/Graphics.hpp"
 
 // Виджет (элемент графического интерфейса)
 class Widget
@@ -17,5 +17,5 @@ public:
 	Widget(sf::Sprite&);
 	virtual ~Widget();
 
-	virtual void drawIn(sf::RenderWindow& window);
+	virtual void drawIn(sf::RenderWindow& window) = 0;
 };

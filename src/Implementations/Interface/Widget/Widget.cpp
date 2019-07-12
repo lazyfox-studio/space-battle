@@ -20,8 +20,3 @@ Widget::~Widget()
 {
 	// just destroy!!
 }
-
-void Widget::drawIn(sf::RenderWindow& window)
-{
-
-}
