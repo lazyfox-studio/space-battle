@@ -15,23 +15,23 @@ Level::~Level()
 
 void Level::resume()
 {
-    isActive = 1;
+    status = Status::active;
 }
 
 void Level::pause()
 {
-	isActive = 0;
+	status = Status::inactive;
 }
 
 void Level::stop()
 {
-	isActive = 0;
-    //Все, что нужно для остановки
+	status = Status::inactive;
+	//Все, что нужно для остановки
 }
 
 void Level::play()
 {
-    if (isActive)
+    if (status == Status::active)
     {
 
     }

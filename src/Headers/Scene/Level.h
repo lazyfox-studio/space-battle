@@ -11,9 +11,16 @@
 //Уровень (управляет тем какие объекты есть на карте, какой фон и т.п.)
 class Level
 {
+public:
+	enum class Status
+	{
+		inactive,
+		active,
+		undefined
+	};
 protected:
     //Состояние уровня
-    bool isActive;
+    Status status;
 
     // Объекты уровня
     sf::RenderWindow* window;           // Окно, в котором рисуется уровень
