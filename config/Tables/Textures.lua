@@ -9,7 +9,7 @@ textures = {
 	},
 	["Spaceship1"] = {
 		path   = "data/Textures/Spaceship1.png",
-		width  = 122,
+		width  = 164,
 		height = 241,
 		frames = 1
 	}

@@ -5,11 +5,12 @@
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
 	sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
 
     Actor tester(5, 5, 10, 10, 0, 0, false, false, sf::Vector2f(0, 0), "Spaceship1");
+    
 
 	while (window.isOpen())
 	{

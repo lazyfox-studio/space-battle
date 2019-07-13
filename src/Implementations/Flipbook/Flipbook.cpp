@@ -61,7 +61,7 @@ sf::Vector2f Flipbook::getPosition() const
 
 void Flipbook::assignTexture(std::string index_)
 {
-	const Texture& textureData = TextureTable::get(index);
+	const Texture& textureData = TextureTable::get(index_);
 	index = index_;
 	frameWidth = textureData.width;
 	frameHeight = textureData.height;
