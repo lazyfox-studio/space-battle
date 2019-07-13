@@ -53,6 +53,9 @@
     <ClCompile Include="src\Functions\Physics\Physics.cpp">
       <Filter>Functions\Physics</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Interface\Grid\Grid.cpp">
+      <Filter>Implementations\Interface\Grid</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -193,6 +196,12 @@
     <Filter Include="Functions\Physics">
       <UniqueIdentifier>{2323ca53-d492-4bca-9503-8b286a642d32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers\Interface\Grid">
+      <UniqueIdentifier>{84ee7212-7af3-43a0-808f-31ba370f0d4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Interface\Grid">
+      <UniqueIdentifier>{e326fac7-66d2-4f85-9d95-cf39230ef294}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -269,6 +278,9 @@
     </ClInclude>
     <ClInclude Include="src\Functions\Physics\Physics.h">
       <Filter>Functions\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Interface\Grid\Grid.h">
+      <Filter>Headers\Interface\Grid</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

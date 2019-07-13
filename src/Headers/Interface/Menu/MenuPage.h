@@ -1,19 +1,19 @@
 #pragma once
 
 #include <vector>
-#include "Interface/Widget/Widget.h"
+#include "Interface/Grid/Grid.h"
 
 //Страница меню
 class MenuPage
 {
 protected:
-    std::vector<Widget*> elements;
+    Grid elements;
 
 public:
     MenuPage();
     MenuPage(const MenuPage& temp);
-    MenuPage(std::vector<Widget*> element_);
+    MenuPage(Grid::GridElements elements_);
     ~MenuPage();
 
-    void addElement(Widget*& element);
+    void addElement(size_t row, Widget*& element);
 };

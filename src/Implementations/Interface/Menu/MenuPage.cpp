@@ -17,7 +17,8 @@ MenuPage::~MenuPage()
 
 }
 
-void MenuPage::addElement(Widget*& element)
+void MenuPage::addElement(size_t row, Widget*& element)
 {
-    elements.push_back(element);
+	// check row!
+    elements.widgets[row].push_back(element);
 }

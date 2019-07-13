@@ -17,5 +17,9 @@ public:
 	Widget(sf::Sprite&);
 	virtual ~Widget();
 
-	virtual void drawIn(sf::RenderWindow& window) = 0;
+	virtual sf::FloatRect getLocalBounds() const = 0;
+
+	virtual void setPosition(sf::Vector2f) = 0;
+	virtual void setWidth(float) = 0;
+	virtual void drawIn(sf::RenderWindow&) = 0;
 };

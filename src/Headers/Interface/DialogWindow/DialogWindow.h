@@ -1,7 +1,8 @@
 #pragma once
 
 #include "Interface/Widget/Button/Button.h"
-#include <vector>;
+#include "Interface/Grid/Grid.h"
+#include <vector>
 
 //Диалоговое окно
 class DialogWindow
@@ -16,8 +17,7 @@ protected:
     unsigned width;
 
     //Элементы окна
-    std::vector<Button::base*> buttons;
-    //std::vector<TextSpace> Text;
+	Grid elements;
 
 public:
     DialogWindow();
