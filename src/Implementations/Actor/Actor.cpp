@@ -11,6 +11,7 @@ Actor::Actor()
     velocity = sf::Vector2f(0,0);
     acceleration = sf::Vector2f(0, 0);
     sprite.assignTexture("Empty");
+    sprite.setPosition(sf::Vector2f(component->x, component->y));
 }
 
 Actor::Actor(float x_, float y_, float height_, float width_, unsigned componentType, float m_, bool attractable_,
@@ -22,6 +23,7 @@ Actor::Actor(float x_, float y_, float height_, float width_, unsigned component
     touchable = touchable_;
     velocity = velocity_;
     sprite.assignTexture(texture_);
+    sprite.setPosition(sf::Vector2f(component->x, component->y));
 }
 
 Actor::Actor(const Actor& temp)
@@ -33,6 +35,7 @@ Actor::Actor(const Actor& temp)
     velocity = temp.velocity;
     acceleration = temp.acceleration;
     sprite = temp.sprite;
+    sprite.setPosition(sf::Vector2f(component->x, component->y));
 }
 
 Actor::~Actor()
@@ -85,6 +88,7 @@ void Actor::setPosition(float x_, float y_, const sf::Vector2f velocity_)
     component->x = x_;
 	component->y = y_;
     velocity = velocity_;
+    sprite.setPosition(sf::Vector2f(component->x, component->y));
 }
 
 void Actor::addAcceleration(const sf::Vector2f acceleration_)
@@ -99,7 +103,7 @@ void Actor::updateAnimation()
 
 void Actor::drawIn(sf::RenderWindow& window)
 {
-
+    sprite.drawIn(window);
 }
 
 void Actor::collide(const Actor& agent)

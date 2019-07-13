@@ -3,8 +3,8 @@
 textures = {
 	["Empty"] = {
 		path   = "data/Textures/Empty.png",
-		width  = 1,
-		height = 1,
+		width  = 64,
+		height = 64,
 		frames = 1
 	},
 	["Spaceship1"] = {

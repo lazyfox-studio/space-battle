@@ -9,11 +9,6 @@ int main()
 	sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
 
-	// test
-	TextureTable::load("Empty");
-	Texture t = TextureTable::get("Empty");
-	std::cout << t.width;
-
     Actor tester(5, 5, 10, 10, 0, 0, false, false, sf::Vector2f(0, 0), "Spaceship1");
 
 	while (window.isOpen())
@@ -26,8 +21,8 @@ int main()
 		}
 
 		window.clear();
+        window.draw(shape);
         tester.drawIn(window);
-		window.draw(shape);
 		window.display();
 	}
 
