@@ -1,6 +1,5 @@
 ﻿#pragma once
-#include "../Pawn.h"
-#include "../../../Global/InputControl.h"
+#include "Actor/Pawn/Pawn.h"
 
 // Персонаж (управляемый игроком объект)
 class Character : Pawn

@@ -142,6 +142,7 @@
     <ClCompile Include="src\Functions\Physics\Physics.cpp" />
     <ClCompile Include="src\Implementations\Actor\Actor.cpp" />
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp" />
+    <ClCompile Include="src\Implementations\Global\InputControl.cpp" />
     <ClCompile Include="src\Implementations\Interface\Grid\Grid.cpp" />
     <ClCompile Include="src\Implementations\Interface\Map\Map.cpp" />
     <ClCompile Include="src\Implementations\Interface\Menu\Menu.cpp" />

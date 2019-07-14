@@ -68,6 +68,9 @@
     <ClCompile Include="src\Functions\Game\Game.cpp">
       <Filter>Functions\Game</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Global\InputControl.cpp">
+      <Filter>Implementations\Global</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
