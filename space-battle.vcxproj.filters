@@ -56,6 +56,9 @@
     <ClCompile Include="src\Implementations\Interface\Grid\Grid.cpp">
       <Filter>Implementations\Interface\Grid</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Interface\Map\Map.cpp">
+      <Filter>Implementations\Interface\Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -202,6 +205,12 @@
     <Filter Include="Implementations\Interface\Grid">
       <UniqueIdentifier>{e326fac7-66d2-4f85-9d95-cf39230ef294}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers\Interface\Map">
+      <UniqueIdentifier>{b45034fe-0d3f-4706-97d2-fa4b13378dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Interface\Map">
+      <UniqueIdentifier>{c773ce9c-39ef-4bfc-979c-242846796837}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -281,6 +290,9 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Interface\Grid\Grid.h">
       <Filter>Headers\Interface\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Interface\Map\Map.h">
+      <Filter>Headers\Interface\Map</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

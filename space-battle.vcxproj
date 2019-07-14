@@ -141,6 +141,7 @@
     <ClCompile Include="src\Implementations\Actor\Actor.cpp" />
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp" />
     <ClCompile Include="src\Implementations\Interface\Grid\Grid.cpp" />
+    <ClCompile Include="src\Implementations\Interface\Map\Map.cpp" />
     <ClCompile Include="src\Implementations\Interface\Menu\Menu.cpp" />
     <ClCompile Include="src\Implementations\Interface\Menu\MenuPage.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Bar\Bar.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="src\Headers\Global\WindowCorners.h" />
     <ClInclude Include="src\Headers\Interface\DialogWindow\DialogWindow.h" />
     <ClInclude Include="src\Headers\Interface\Grid\Grid.h" />
+    <ClInclude Include="src\Headers\Interface\Map\Map.h" />
     <ClInclude Include="src\Headers\Interface\Menu\Menu.h" />
     <ClInclude Include="src\Headers\Interface\Menu\MenuPage.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Bar\Bar.h" />
