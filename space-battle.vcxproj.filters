@@ -59,6 +59,15 @@
     <ClCompile Include="src\Implementations\Interface\Map\Map.cpp">
       <Filter>Implementations\Interface\Map</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\Tables\MusicTable.cpp">
+      <Filter>Implementations\Tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Functions\Math\Math.cpp">
+      <Filter>Functions\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Functions\Game\Game.cpp">
+      <Filter>Functions\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -211,6 +220,9 @@
     <Filter Include="Implementations\Interface\Map">
       <UniqueIdentifier>{c773ce9c-39ef-4bfc-979c-242846796837}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Functions\Game">
+      <UniqueIdentifier>{1582e590-c05e-4743-8027-65a06ac5a5f6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -293,6 +305,15 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Interface\Map\Map.h">
       <Filter>Headers\Interface\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Tables\MusicTable.h">
+      <Filter>Headers\Tables</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Functions\Math\Math.h">
+      <Filter>Functions\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Functions\Game\Game.h">
+      <Filter>Functions\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
