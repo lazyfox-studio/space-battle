@@ -74,6 +74,9 @@
     <ClCompile Include="src\Implementations\LuaScript\LuaEnv.cpp">
       <Filter>Implementations\LuaScript</Filter>
     </ClCompile>
+    <ClCompile Include="src\Functions\Scripting\Scripting.cpp">
+      <Filter>Functions\Scripting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -229,6 +232,12 @@
     <Filter Include="Functions\Game">
       <UniqueIdentifier>{1582e590-c05e-4743-8027-65a06ac5a5f6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Functions\Scripting">
+      <UniqueIdentifier>{da90cbf0-fdcb-4505-a36f-465499509ba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\Controls">
+      <UniqueIdentifier>{50682492-c0ec-4af1-b55c-15a4797e9d76}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -324,6 +333,9 @@
     <ClInclude Include="src\Headers\LuaScript\LuaEnv.h">
       <Filter>Headers\LuaScript</Filter>
     </ClInclude>
+    <ClInclude Include="src\Functions\Scripting\Scripting.h">
+      <Filter>Functions\Scripting</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config\Tables\Textures.lua">
@@ -337,6 +349,12 @@
     </None>
     <None Include="config\Levels\Level1.lua">
       <Filter>config\Levels</Filter>
+    </None>
+    <None Include="config\Controls\Control.lua">
+      <Filter>config\Controls</Filter>
+    </None>
+    <None Include="config\Test.lua">
+      <Filter>config</Filter>
     </None>
   </ItemGroup>
 </Project>

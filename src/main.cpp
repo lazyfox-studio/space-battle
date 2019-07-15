@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include "Tables/TextureTable.h"
-#include "Actor/Actor.h"
+#include "Functions/Game/Game.h"
+#include "Functions/Scripting/Scripting.h"
 
 int main()
 {
@@ -9,8 +9,12 @@ int main()
 	sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
 
+	Game::init();
+	Scripting::init();
+
+	LuaScript script(Scripting::lua, "config/Test.lua");
     Actor tester(5, 5, 10, 10, 0, 0, false, false, sf::Vector2f(0, 0), "Spaceship1");
-    
+	(Scripting::lua.getGlobal("someFunc"))(&tester);
 
 	while (window.isOpen())
 	{

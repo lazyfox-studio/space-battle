@@ -65,4 +65,6 @@ public:
 
     //Действия с коллизиями
     virtual void collide(const Actor& agent); //Что испытает объект
+
+	void test(int n) { std::cout << "test: " << n << "\n"; }
 };

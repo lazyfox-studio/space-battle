@@ -1,5 +1,6 @@
 ﻿#pragma once
 
+#include "../../Functions/Scripting/Scripting.h"
 #include "Actor/Pawn/Character/Character.h"
 #include <map>
 #include <functional>
@@ -19,9 +20,11 @@ class InputControl
 	Mode mode;
 
 	std::map<KBKey, CFunc> controlFunctions;
+	void loadControlFunctions();
 	void setControlFunctions();
 	void callControlFunction(KBKey keyCode);
-
+	
+	static std::map<KBKey, const std::string> keyStrings;
 public:
 	InputControl();
 	InputControl(const InputControl& temp) = default;

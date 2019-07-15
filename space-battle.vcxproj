@@ -140,6 +140,7 @@
     <ClCompile Include="src\Functions\Game\Game.cpp" />
     <ClCompile Include="src\Functions\Math\Math.cpp" />
     <ClCompile Include="src\Functions\Physics\Physics.cpp" />
+    <ClCompile Include="src\Functions\Scripting\Scripting.cpp" />
     <ClCompile Include="src\Implementations\Actor\Actor.cpp" />
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp" />
     <ClCompile Include="src\Implementations\Global\InputControl.cpp" />
@@ -166,6 +167,7 @@
   <ItemGroup>
     <ClInclude Include="src\Functions\Game\Game.h" />
     <ClInclude Include="src\Functions\Math\Math.h" />
+    <ClInclude Include="src\Functions\Scripting\Scripting.h" />
     <ClInclude Include="src\Headers\Constants.h" />
     <ClInclude Include="src\Functions\Physics\Physics.h" />
     <ClInclude Include="src\Headers\Actor\Actor.h" />
@@ -197,10 +199,12 @@
     <ClInclude Include="src\Headers\Tables\TextureTable.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="config\Controls\Control.lua" />
     <None Include="config\Levels\Level1.lua" />
     <None Include="config\Tables\Fonts.lua" />
     <None Include="config\Tables\Music.Lua" />
     <None Include="config\Tables\Textures.lua" />
+    <None Include="config\Test.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

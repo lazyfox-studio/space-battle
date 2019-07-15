@@ -2,6 +2,8 @@
 
 namespace Game
 {
+	LuaEnv lua = LuaEnv();
+
 	void init()
 	{
 		// Инициализация таблиц (загрузка скриптов)
