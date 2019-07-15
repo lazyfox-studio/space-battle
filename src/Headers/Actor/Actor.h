@@ -41,8 +41,8 @@ public:
     // Аксессоры
     float getX() const;
     float getY() const;
-    float getHeight() const;
-    float getWidth() const;
+    float getr() const;
+    float getR() const;
     float getM() const;
     bool isAttractable() const;
     bool isTouchable() const;
@@ -50,7 +50,14 @@ public:
 
 	// Управление
     void setPosition(float x_, float y_, const sf::Vector2f velocity_ = sf::Vector2f(0, 0));
+    void move(float dx, float dy);
     void addAcceleration(const sf::Vector2f acceleration_);
+    void addVelocity(const sf::Vector2f velocity_);
+    void rotate(int angle_);
+    void setRotation(int angle_);
+    void impactAcceleration();
+    void impactVelocity();
+
 
     // Отображение
     void updateAnimation();

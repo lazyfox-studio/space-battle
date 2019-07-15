@@ -53,14 +53,14 @@ float Actor::getY() const
     return component->y;
 }
 
-float Actor::getHeight() const
+float Actor::getr() const
 {
-    return component->height;
+    return component->r;
 }
 
-float Actor::getWidth() const
+float Actor::getR() const
 {
-    return component->width;
+    return component->R;
 }
 
 float Actor::getM() const
@@ -91,9 +91,46 @@ void Actor::setPosition(float x_, float y_, const sf::Vector2f velocity_)
     sprite.setPosition(sf::Vector2f(component->x, component->y));
 }
 
+void Actor::move(float dx, float dy)
+{
+    component->x += dx;
+    component->y += dy;
+    sprite.setPosition(sf::Vector2f(component->x, component->y));
+}
+
 void Actor::addAcceleration(const sf::Vector2f acceleration_)
 {
-    acceleration = acceleration + acceleration_;
+    acceleration += acceleration_;
+}
+
+void Actor::addVelocity(const sf::Vector2f velocity_)
+{
+    velocity += velocity_;
+}
+
+void Actor::rotate(int angle_)
+{
+    component->angle += angle_;
+    component->angle = component->angle % 360;
+    sprite.setRotation(component->angle);
+}
+
+void Actor::setRotation(int angle_)
+{
+    component->angle = angle_ % 360;
+    sprite.setRotation(component->angle);
+}
+
+void Actor::impactAcceleration()
+{
+    velocity += acceleration;
+}
+
+void Actor::impactVelocity()
+{
+    component->x += velocity.x;
+    component->y += velocity.y;
+    sprite.setPosition(sf::Vector2f(component->x, component->y));
 }
 
 void Actor::updateAnimation()

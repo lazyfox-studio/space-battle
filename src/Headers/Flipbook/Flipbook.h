@@ -39,8 +39,8 @@ public:
 	// Модификация и перемещение
 	void setPosition(sf::Vector2f position);
 	void scale(float factor);
-	void rotate(float angle);
-	void setRotation(float angle);
+	void rotate(int angle);
+	void setRotation(int angle);
 	void setTextureRect(sf::IntRect rect);
 
     //Управление анимацией

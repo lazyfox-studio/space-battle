@@ -7,17 +7,18 @@ protected:
     // Координаты
     float x;
     float y;
+    int angle;  //Угол
     
     // Параметры осей
-    float height; //Высота компоненты
-    float width;  //Ширина компоненты
+    float r; //Малая полуось
+    float R; //Большая полуось
 
     friend class Actor;
 
 public:
     Component();
     Component(const Component& temp);
-    Component(float x_, float y_, float height_, float width_);
+    Component(float x_, float y_, int angle_, float height_, float width_);
     ~Component();
 
     Component& operator=(const Component& temp);

@@ -81,12 +81,12 @@ void Flipbook::scale(float factor)
 	sprite.setScale(sf::Vector2f(factor, factor));
 }
 
-void Flipbook::rotate(float angle)
+void Flipbook::rotate(int angle)
 {
 	sprite.rotate(angle);
 }
 
-void Flipbook::setRotation(float angle)
+void Flipbook::setRotation(int angle)
 {
 	sprite.setRotation(angle);
 }
