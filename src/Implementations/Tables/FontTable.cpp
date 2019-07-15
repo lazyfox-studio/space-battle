@@ -2,6 +2,12 @@
 
 std::map<std::string, Font> FontTable::fonts = std::map<std::string, Font>();
 
+void FontTable::init()
+{
+	LuaScript script(Game::lua);
+	script.execute("config/Tables/Fonts.lua");
+}
+
 const sf::Font& FontTable::getFont(const std::string index)
 {
 	auto fontIter = fonts.find(index);
@@ -26,9 +32,7 @@ const Font& FontTable::get(const std::string index)
 
 void FontTable::load(const std::string index)
 {
-	LuaScript script;
-	script.execute("config/Tables/Fonts.lua");
-	luabridge::LuaRef fontsData = script.getGlobal("fonts");
+	luabridge::LuaRef fontsData = Game::lua.getGlobal("fonts");
 	luabridge::LuaRef fontData = fontsData[index.c_str()];
 	if (fontData.isNil())
 		throw std::out_of_range("Font with that index not found."); // noindex

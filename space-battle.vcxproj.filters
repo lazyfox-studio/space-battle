@@ -71,6 +71,9 @@
     <ClCompile Include="src\Implementations\Global\InputControl.cpp">
       <Filter>Implementations\Global</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\LuaScript\LuaEnv.cpp">
+      <Filter>Implementations\LuaScript</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -317,6 +320,9 @@
     </ClInclude>
     <ClInclude Include="src\Functions\Game\Game.h">
       <Filter>Functions\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\LuaScript\LuaEnv.h">
+      <Filter>Headers\LuaScript</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

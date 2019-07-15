@@ -2,6 +2,12 @@
 
 std::map<std::string, Texture> TextureTable::textures = std::map<std::string, Texture>();
 
+void TextureTable::init()
+{
+	LuaScript script(Game::lua);
+	script.execute("config/Tables/Textures.lua");
+}
+
 const sf::Texture& TextureTable::getTexture(const std::string index)
 {
 	auto textureIter = textures.find(index);
@@ -26,9 +32,7 @@ const Texture& TextureTable::get(const std::string index)
 
 void TextureTable::load(const std::string index)
 {
-	LuaScript script;
-	script.execute("config/Tables/Textures.lua");
-	luabridge::LuaRef texturesData = script.getGlobal("textures");
+	luabridge::LuaRef texturesData = Game::lua.getGlobal("textures");
 	luabridge::LuaRef textureData = texturesData[index.c_str()];
 	if (textureData.isNil())
 		throw std::out_of_range("Texture with that index not found."); // noindex

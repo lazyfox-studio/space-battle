@@ -83,12 +83,12 @@ void Flipbook::scale(float factor)
 
 void Flipbook::rotate(int angle)
 {
-	sprite.rotate(angle);
+	sprite.rotate(float(angle));
 }
 
 void Flipbook::setRotation(int angle)
 {
-	sprite.setRotation(angle);
+	sprite.setRotation(float(angle));
 }
 
 void Flipbook::setTextureRect(sf::IntRect rect)

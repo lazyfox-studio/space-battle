@@ -20,7 +20,7 @@ Component::Component(const Component& temp)
     R = temp.R;
 }
 
-Component::Component(float x_, float y_, int angle_,float r_, float R_)
+Component::Component(float x_, float y_, int angle_, float r_, float R_)
 {
     x = x_;
     y = y_;

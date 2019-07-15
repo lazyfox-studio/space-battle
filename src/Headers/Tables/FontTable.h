@@ -5,6 +5,11 @@
 #include <map>
 #include <string>
 
+namespace Game
+{
+	extern LuaEnv lua;
+}
+
 struct Font
 {
 	sf::Font font;
@@ -18,6 +23,7 @@ class FontTable
 	friend class Scoreboard;
 	friend class text;
 public:
+	static void init();
 	static const sf::Font& getFont(const std::string index); // õç
 	static const Font& get(const std::string index);
 	static void load(const std::string index);

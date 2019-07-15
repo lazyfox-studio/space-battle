@@ -2,6 +2,12 @@
 
 std::map<const std::string, Music> MusicTable::music = std::map<const std::string, Music>();
 
+void MusicTable::init()
+{
+	LuaScript script(Game::lua);
+	script.execute("config/Tables/Textures.lua");
+}
+
 const sf::Music& MusicTable::getMusic(const std::string index)
 {
 	auto musicIter = music.find(index);
@@ -26,9 +32,7 @@ const Music& MusicTable::get(const std::string index)
 
 void MusicTable::load(const std::string index)
 {
-	LuaScript script;
-	script.execute("config/Tables/Music.lua");
-	luabridge::LuaRef musicData = script.getGlobal("music");
+	luabridge::LuaRef musicData = Game::lua.getGlobal("music");
 	luabridge::LuaRef musicFileData = musicData[index.c_str()];
 	if (musicFileData.isNil())
 		throw std::out_of_range("Music with that index not found."); // noindex

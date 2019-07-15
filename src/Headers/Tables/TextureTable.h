@@ -5,6 +5,11 @@
 #include <map>
 #include <string>
 
+namespace Game
+{
+	extern LuaEnv lua;
+}
+
 struct Texture
 {
 	sf::Texture texture;
@@ -20,6 +25,7 @@ class TextureTable
 	TextureTable(const TextureTable&);
 	friend class Flipbook;
 public:
+	static void init();
 	static const sf::Texture& getTexture(const std::string index); // хз
 	static const Texture& get(const std::string index);
 	static void load(const std::string index);

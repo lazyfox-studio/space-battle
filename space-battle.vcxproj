@@ -152,6 +152,7 @@
     <ClCompile Include="src\Implementations\Interface\Widget\Icon\Icon.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Scoreboard\Scoreboard.cpp" />
     <ClCompile Include="src\Implementations\Interface\Widget\Widget.cpp" />
+    <ClCompile Include="src\Implementations\LuaScript\LuaEnv.cpp" />
     <ClCompile Include="src\Implementations\LuaScript\LuaScript.cpp" />
     <ClCompile Include="src\Implementations\Math\Component\Component.cpp" />
     <ClCompile Include="src\Implementations\Math\Component\Ellipse\Ellipse.cpp" />
@@ -185,6 +186,7 @@
     <ClInclude Include="src\Headers\Interface\Widget\Icon\Icon.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Widget.h" />
+    <ClInclude Include="src\Headers\LuaScript\LuaEnv.h" />
     <ClInclude Include="src\Headers\LuaScript\LuaScript.h" />
     <ClInclude Include="src\Headers\Math\Component\Component.h" />
     <ClInclude Include="src\Headers\Math\Component\Ellipse\Ellipse.h" />

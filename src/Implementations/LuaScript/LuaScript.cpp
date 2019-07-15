@@ -1,60 +1,26 @@
 ﻿#include "LuaScript/LuaScript.h"
-#include "..\..\Headers\LuaScript\LuaScript.h"
 
-unsigned LuaScript::states = 0U;
-//lua_State* LuaScript::L = nullptr;
 
-LuaScript::LuaScript()
+LuaScript::LuaScript(LuaEnv& env_)
 {
-	states++;
-	//if (!L)
-		L = luaL_newstate();
+	env = &env_;
 }
 
-LuaScript::LuaScript(const std::string filename_) : LuaScript()
+LuaScript::LuaScript(LuaEnv& env_, const std::string filename_)
 {
-	if (luaL_loadfile(L, filename_.c_str()))
+	env = &env_;
+	if (luaL_loadfile(env->L, filename_.c_str()))
 		return;
-	else if (lua_pcall(L, 0, 0, 0))
+	else if (lua_pcall(env->L, 0, 0, 0))
 		return;
-	filename = filename_;
-}
-
-LuaScript::~LuaScript()
-{
-	//if (--states == 0U)
-	//{
-		lua_close(L);
-		L = nullptr;
-	//}
-}
-
-std::string LuaScript::getFilename() const
-{
-	return filename;
 }
 
 int LuaScript::execute(const std::string filename_)
 {
-	int status = luaL_loadfile(L, filename_.c_str());
+	int status = luaL_loadfile(env->L, filename_.c_str());
 	if (status)
 		return status;
-	else if (lua_pcall(L, 0, 0, 0))
+	else if (lua_pcall(env->L, 0, 0, 0))
 		return status;
-	filename = filename_;
 	return status;
-}
-
-luabridge::LuaRef LuaScript::getGlobal(const std::string varName)
-{
-	if (filename.empty())
-		throw std::exception("File not executed.");
-	return luabridge::getGlobal(L, varName.c_str());
-}
-
-luabridge::Namespace LuaScript::getGlobalNamespace(const std::string namespaceName)
-{
-	if(filename.empty())
-		throw std::exception("File not executed.");
-	return luabridge::getGlobalNamespace(L);
 }
