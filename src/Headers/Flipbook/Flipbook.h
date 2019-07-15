@@ -52,4 +52,6 @@ public:
     void drawIn(sf::RenderWindow& window);
     void makeVisible();
     void makeUnvisible();
+
+	Flipbook& operator=(const Flipbook& temp);
 };

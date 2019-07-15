@@ -1,4 +1,5 @@
 #include "Flipbook/Flipbook.h"
+#include "..\..\Headers\Flipbook\Flipbook.h"
 void Flipbook::updateTextureRect()
 {
 	sprite.setTextureRect(sf::IntRect(frameWidth * frameCurrent, 0, frameWidth, frameHeight));
@@ -128,4 +129,17 @@ void Flipbook::makeVisible()
 void Flipbook::makeUnvisible()
 {
 	isVisible = false;
+}
+
+Flipbook& Flipbook::operator=(const Flipbook& temp)
+{
+	index = temp.index;
+	frameWidth = temp.frameWidth;
+	frameHeight = temp.frameHeight;
+	frameCount = temp.frameCount;
+	frameCurrent = temp.frameCurrent;
+	isVisible = temp.isVisible;
+	sprite.setTexture(TextureTable::getTexture(index));
+	updateTextureRect();
+	return *this;
 }
