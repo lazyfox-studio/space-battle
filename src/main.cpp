@@ -14,7 +14,14 @@ int main()
 
 	LuaScript script(Scripting::lua, "config/Test.lua");
     Actor tester(5, 5, 10, 10, 0, 0, false, false, sf::Vector2f(0, 0), "Spaceship1");
-	(Scripting::lua.getGlobal("someFunc"))(&tester);
+	try
+	{
+		(Scripting::lua.getGlobal("someFunc"))(&tester); // print test: 123
+	}
+	catch (luabridge::LuaException& e)
+	{
+		std::cerr << e.what();
+	}
 
 	while (window.isOpen())
 	{

@@ -1,5 +1,5 @@
 -- Test
 
 function someFunc(actor)
-	actor.test(123)
+	actor:test(123)
 end

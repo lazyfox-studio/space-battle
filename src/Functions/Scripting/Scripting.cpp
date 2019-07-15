@@ -6,23 +6,12 @@ namespace Scripting
 	
 	void init()
 	{
-		try {
-			lua.getGlobalNamespace()
-				.beginClass<Actor>("Actor")
-				.addFunction("setPosition", &(Actor::setPosition))
-				.addFunction("test", &(Actor::test))
-				.endClass()
-				.addFunction("playSound", playSound)
-				.endNamespace();
-		}
-		catch (luabridge::LuaException& e)
-		{
-			std::cerr << e.what();
-		}
-		catch (...)
-		{
-			std::cerr << "something bad\n";
-		}
+		lua.getGlobalNamespace()
+			.beginClass<Actor>("Actor")
+			.addFunction("setPosition", &(Actor::setPosition))
+			.addFunction("test", &(Actor::test))
+			.endClass()
+			.addFunction("playSound", playSound);
 	}
 
 	void playSound(const std::string sound)

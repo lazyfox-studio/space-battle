@@ -3,6 +3,7 @@
 LuaEnv::LuaEnv()
 {
 	L = luaL_newstate();
+	luaL_openlibs(L);
 }
 
 LuaEnv::LuaEnv(const LuaEnv& temp)
