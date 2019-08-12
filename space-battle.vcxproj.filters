@@ -77,6 +77,9 @@
     <ClCompile Include="src\Functions\Scripting\Scripting.cpp">
       <Filter>Functions\Scripting</Filter>
     </ClCompile>
+    <ClCompile Include="src\Headers\Logger\Logger.cpp">
+      <Filter>Headers\Logger</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -238,6 +241,9 @@
     <Filter Include="config\Controls">
       <UniqueIdentifier>{50682492-c0ec-4af1-b55c-15a4797e9d76}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers\Logger">
+      <UniqueIdentifier>{e87ca1d8-9bd7-45bb-904c-f4f3bf7763f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -335,6 +341,9 @@
     </ClInclude>
     <ClInclude Include="src\Functions\Scripting\Scripting.h">
       <Filter>Functions\Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Logger\Logger.h">
+      <Filter>Headers\Logger</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

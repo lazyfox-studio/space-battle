@@ -94,7 +94,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\SFML-2.5.1-x64\include;E:\Source\Lua-5.3.5-x64\include;src\Headers;E:\Source\SFML-2.5.1 x64\include;D:\Lua-5.3.5-x64\include;</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,6 +141,7 @@
     <ClCompile Include="src\Functions\Math\Math.cpp" />
     <ClCompile Include="src\Functions\Physics\Physics.cpp" />
     <ClCompile Include="src\Functions\Scripting\Scripting.cpp" />
+    <ClCompile Include="src\Headers\Logger\Logger.cpp" />
     <ClCompile Include="src\Implementations\Actor\Actor.cpp" />
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp" />
     <ClCompile Include="src\Implementations\Global\InputControl.cpp" />
@@ -188,6 +189,7 @@
     <ClInclude Include="src\Headers\Interface\Widget\Icon\Icon.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Scoreboard\Scoreboard.h" />
     <ClInclude Include="src\Headers\Interface\Widget\Widget.h" />
+    <ClInclude Include="src\Headers\Logger\Logger.h" />
     <ClInclude Include="src\Headers\LuaScript\LuaEnv.h" />
     <ClInclude Include="src\Headers\LuaScript\LuaScript.h" />
     <ClInclude Include="src\Headers\Math\Component\Component.h" />

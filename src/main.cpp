@@ -1,7 +1,11 @@
+#pragma once
+
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Functions/Game/Game.h"
 #include "Functions/Scripting/Scripting.h"
+
+#include "Headers/Logger/Logger.h"
 
 int main()
 {
@@ -11,6 +15,10 @@ int main()
 
 	Game::init();
 	Scripting::init();
+
+    Logger::start();
+    Logger::log("Hello");
+    Logger::log("World");
 
 	LuaScript script(Scripting::lua, "config/Test.lua");
     Actor tester(5, 5, 10, 10, 0, 0, false, false, sf::Vector2f(0, 0), "Spaceship1");
