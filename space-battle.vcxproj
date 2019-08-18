@@ -141,6 +141,7 @@
     <ClCompile Include="src\Functions\Math\Math.cpp" />
     <ClCompile Include="src\Functions\Physics\Physics.cpp" />
     <ClCompile Include="src\Functions\Scripting\Scripting.cpp" />
+    <ClCompile Include="src\Functions\Service\Service.cpp" />
     <ClCompile Include="src\Headers\Logger\Logger.cpp" />
     <ClCompile Include="src\Implementations\Actor\Actor.cpp" />
     <ClCompile Include="src\Implementations\Flipbook\Flipbook.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="src\Functions\Game\Game.h" />
     <ClInclude Include="src\Functions\Math\Math.h" />
     <ClInclude Include="src\Functions\Scripting\Scripting.h" />
+    <ClInclude Include="src\Functions\Service\Service.h" />
     <ClInclude Include="src\Headers\Constants.h" />
     <ClInclude Include="src\Functions\Physics\Physics.h" />
     <ClInclude Include="src\Headers\Actor\Actor.h" />

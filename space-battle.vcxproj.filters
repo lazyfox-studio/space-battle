@@ -80,6 +80,9 @@
     <ClCompile Include="src\Headers\Logger\Logger.cpp">
       <Filter>Headers\Logger</Filter>
     </ClCompile>
+    <ClCompile Include="src\Functions\Service\Service.cpp">
+      <Filter>Functions\Service</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -244,6 +247,9 @@
     <Filter Include="Headers\Logger">
       <UniqueIdentifier>{e87ca1d8-9bd7-45bb-904c-f4f3bf7763f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Functions\Service">
+      <UniqueIdentifier>{812ea532-69ac-4096-8df7-6317a59deefd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -344,6 +350,9 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Logger\Logger.h">
       <Filter>Headers\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Functions\Service\Service.h">
+      <Filter>Functions\Service</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
