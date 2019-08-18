@@ -4,38 +4,43 @@
 
 Actor::Actor()
 {
-    component = new Component;
+    x = 0;
+    y = 0;
     m = 0;
+    collisionBoxes.clear();
     attractable = false;
     touchable = false;
     velocity = sf::Vector2f(0,0);
     acceleration = sf::Vector2f(0, 0);
     sprite.assignTexture("Empty");
-    sprite.setPosition(sf::Vector2f(component->x, component->y));
+    sprite.setPosition(sf::Vector2f(x, y));
 }
 
-Actor::Actor(float x_, float y_, float height_, float width_, unsigned componentType, float m_, bool attractable_,
-	bool touchable_, const sf::Vector2f velocity_, const std::string texture_)
+Actor::Actor(float x_, float y_, float m_, std::vector <Square> collisionBoxes_, bool attractable_, bool touchable_, const sf::Vector2f velocity_, const std::string texture_)
 {
-    component = new Component(x_, y_, 0 /*какой-то угол*/, height_, width_);
+    x = x_;
+    y = y_;
     m = m_;
+    collisionBoxes = collisionBoxes_;
     attractable = attractable_;
     touchable = touchable_;
     velocity = velocity_;
     sprite.assignTexture(texture_);
-    sprite.setPosition(sf::Vector2f(component->x, component->y));
+    sprite.setPosition(sf::Vector2f(x, y));
 }
 
 Actor::Actor(const Actor& temp)
 {
-	*component = *(temp.component);
+    x = temp.x;
+    y = temp.y;
     m = temp.m;
+    collisionBoxes = temp.collisionBoxes;
     attractable = temp.attractable;
     touchable = temp.touchable;
     velocity = temp.velocity;
     acceleration = temp.acceleration;
     sprite = temp.sprite;
-    sprite.setPosition(sf::Vector2f(component->x, component->y));
+    sprite.setPosition(sf::Vector2f(x, y));
 }
 
 Actor::~Actor()
@@ -45,22 +50,12 @@ Actor::~Actor()
 
 float Actor::getX() const
 {
-    return component->x;
+    return x;
 }
 
 float Actor::getY() const
 {
-    return component->y;
-}
-
-float Actor::getr() const
-{
-    return component->r;
-}
-
-float Actor::getR() const
-{
-    return component->R;
+    return y;
 }
 
 float Actor::getM() const
@@ -80,22 +75,22 @@ bool Actor::isTouchable() const
 
 float Actor::distance(const Actor& temp) const
 {
-	return sqrt((component->x - temp.component->x) * (component->x - temp.component->x) + (component->y - temp.component->y) * (component->y - temp.component->y));
+	return sqrt((x - temp.x) * (x - temp.x) + (y - temp.y) * (y - temp.y));
 }
 
 void Actor::setPosition(float x_, float y_, const sf::Vector2f velocity_)
 {
-    component->x = x_;
-	component->y = y_;
+    x = x_;
+	y = y_;
     velocity = velocity_;
-    sprite.setPosition(sf::Vector2f(component->x, component->y));
+    sprite.setPosition(sf::Vector2f(x, y));
 }
 
 void Actor::move(float dx, float dy)
 {
-    component->x += dx;
-    component->y += dy;
-    sprite.setPosition(sf::Vector2f(component->x, component->y));
+    x += dx;
+    y += dy;
+    sprite.setPosition(sf::Vector2f(x, y));
 }
 
 void Actor::addAcceleration(const sf::Vector2f acceleration_)
@@ -110,15 +105,19 @@ void Actor::addVelocity(const sf::Vector2f velocity_)
 
 void Actor::rotate(int angle_)
 {
-    component->angle += angle_;
-    component->angle = component->angle % 360;
-    sprite.setRotation(component->angle);
+    int angle = angle_;
+    float angle_rad = angle_ / 180 * Pi;
+    for (int i = 0; i < collisionBoxes.size(); i++)
+    {
+        collisionBoxes[i].x = collisionBoxes[i].x * cos(angle_rad) - collisionBoxes[i].y * sin(angle_rad);
+        collisionBoxes[i].y = collisionBoxes[i].x * sin(angle_rad) + collisionBoxes[i].y * cos(angle_rad);
+    }
+    sprite.rotate(angle_);
 }
 
 void Actor::setRotation(int angle_)
 {
-    component->angle = angle_ % 360;
-    sprite.setRotation(component->angle);
+    this->rotate(angle_ - angle);
 }
 
 void Actor::impactAcceleration()
@@ -128,9 +127,9 @@ void Actor::impactAcceleration()
 
 void Actor::impactVelocity()
 {
-    component->x += velocity.x;
-    component->y += velocity.y;
-    sprite.setPosition(sf::Vector2f(component->x, component->y));
+    x += velocity.x;
+    y += velocity.y;
+    sprite.setPosition(sf::Vector2f(x, y));
 }
 
 void Actor::updateAnimation()

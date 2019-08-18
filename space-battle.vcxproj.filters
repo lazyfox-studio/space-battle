@@ -38,15 +38,6 @@
     <ClCompile Include="src\Implementations\Scene\Level.cpp">
       <Filter>Implementations\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="src\Implementations\Math\Component\Ellipse\Ellipse.cpp">
-      <Filter>Implementations\Math\Component\Ellipse</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Implementations\Math\Component\Component.cpp">
-      <Filter>Implementations\Math\Component</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Implementations\Math\Component\Rectangle\Rectangle.cpp">
-      <Filter>Implementations\Math\Component\Rectangle</Filter>
-    </ClCompile>
     <ClCompile Include="src\Implementations\Tables\TextureTable.cpp">
       <Filter>Implementations\Tables</Filter>
     </ClCompile>
@@ -82,6 +73,9 @@
     </ClCompile>
     <ClCompile Include="src\Functions\Service\Service.cpp">
       <Filter>Functions\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Implementations\Math\Square\Square.cpp">
+      <Filter>Implementations\Math\Square</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -169,15 +163,6 @@
     <Filter Include="Headers\Math">
       <UniqueIdentifier>{eb3b6f25-5188-4796-91e9-9ad5b87cfcbb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Headers\Math\Component">
-      <UniqueIdentifier>{04c3683a-24f9-43f1-a72a-70ca60577264}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Headers\Math\Component\Ellipse">
-      <UniqueIdentifier>{1aeca9ee-27c2-47d4-b438-8e2d4c32072a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Headers\Math\Component\Rectangle">
-      <UniqueIdentifier>{11fba554-0ebe-4ab1-92c1-de3515e76fc5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Implementations\Interface\Widget\Icon">
       <UniqueIdentifier>{beef79ce-07e0-4ed3-9534-e86e76b3d029}</UniqueIdentifier>
     </Filter>
@@ -207,15 +192,6 @@
     </Filter>
     <Filter Include="Implementations\Math">
       <UniqueIdentifier>{ddb9f2ec-7b81-490a-a800-85c2f3003ad8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Implementations\Math\Component">
-      <UniqueIdentifier>{c2833bd2-4ebe-4d2e-a6cf-6e6527ccf787}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Implementations\Math\Component\Ellipse">
-      <UniqueIdentifier>{94db324f-549a-462e-8777-762e47c88a75}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Implementations\Math\Component\Rectangle">
-      <UniqueIdentifier>{9ea9405f-bd98-4cc2-aebe-aa1fa3671835}</UniqueIdentifier>
     </Filter>
     <Filter Include="config\Levels">
       <UniqueIdentifier>{91c5db0d-c0b2-4c19-bf57-793363df3cfc}</UniqueIdentifier>
@@ -249,6 +225,12 @@
     </Filter>
     <Filter Include="Functions\Service">
       <UniqueIdentifier>{812ea532-69ac-4096-8df7-6317a59deefd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Math\Square">
+      <UniqueIdentifier>{499923b3-b913-469f-9096-a53499b27041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\Math\Square">
+      <UniqueIdentifier>{756f3032-ec12-4fb4-bd36-ed354052b951}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -297,15 +279,6 @@
     <ClInclude Include="src\Headers\Constants.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="src\Headers\Math\Component\Component.h">
-      <Filter>Headers\Math\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Math\Component\Ellipse\Ellipse.h">
-      <Filter>Headers\Math\Component\Ellipse</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Headers\Math\Component\Rectangle\Rectangle.h">
-      <Filter>Headers\Math\Component\Rectangle</Filter>
-    </ClInclude>
     <ClInclude Include="src\Headers\Interface\Widget\Icon\Icon.h">
       <Filter>Headers\Interface\Widget\Icon</Filter>
     </ClInclude>
@@ -353,6 +326,9 @@
     </ClInclude>
     <ClInclude Include="src\Functions\Service\Service.h">
       <Filter>Functions\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\Math\Square\Square.h">
+      <Filter>Headers\Math\Square</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

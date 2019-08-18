@@ -9,11 +9,11 @@ namespace Physics
     // Ньютоновское притяжение
     void gravitation(Actor& a, Actor& b);
 
-    // Притяжение по оси Y
-    void verticalAcceleration(Actor& a);
+    // Притяжение по произвольной оси с укорением g
+    void acceleration(Actor& a, char axis = 'y', char direction = '+');
 
     // Проверка коллизий
-    void collisions(Actor& a, Actor& b);
+    void collisionCheck(Actor& a, Actor& b);
 
 	// Расстояние
 	template<typename Type1, typename Type2>

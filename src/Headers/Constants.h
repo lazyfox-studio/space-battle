@@ -1,5 +1,8 @@
 ﻿#pragma once
 
+//Число Пи
+constexpr float Pi = 3.14159;
+
 // Гравитационная постоянная
 constexpr float G = 1.0f;
 

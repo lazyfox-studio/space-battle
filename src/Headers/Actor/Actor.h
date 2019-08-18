@@ -3,22 +3,25 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>
 #include <string>
+#include <vector>
 #include "Constants.h"
 #include "Flipbook/Flipbook.h"
-#include "Math/Component/Component.h"
-#include "Math/Component/Rectangle/Rectangle.h"
-#include "Math/Component/Ellipse/Ellipse.h"
+#include "Math/Square/Square.h"
 
 // Actor (объект, который может быть помещён на игровую локацию)
 class Actor
 {
 protected:
      
-    // Компонента тела
-    Component *component;
 
     // Параметры тела
-    float m;      // Масса
+    float x;
+    float y;
+    int angle; //Угол поворота тела
+    float m;   // Масса
+
+    // Box'ы коллизий
+    std::vector <Square> collisionBoxes; //Координаты ОТНОСИТЕЛЬНЫЕ
 
     // Свойства тела
 
@@ -34,15 +37,13 @@ protected:
 public:
     //Конструкторы и Деструкторы
     Actor();
-    Actor(float x_, float y_, float height_, float width_, unsigned componentType, float m_, bool attractable_, bool touchable_, const sf::Vector2f velocity_, const std::string texture_);
+    Actor(float x_, float y_, float m_, std::vector <Square> collisionBoxes_, bool attractable_, bool touchable_, const sf::Vector2f velocity_, const std::string texture_);
     Actor(const Actor& temp);
     ~Actor();
 
     // Аксессоры
     float getX() const;
     float getY() const;
-    float getr() const;
-    float getR() const;
     float getM() const;
     bool isAttractable() const;
     bool isTouchable() const;

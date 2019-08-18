@@ -2,6 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
 #include "Functions/Game/Game.h"
 #include "Functions/Scripting/Scripting.h"
 
@@ -21,7 +22,7 @@ int main()
     Logger::log("World");
 
 	LuaScript script(Scripting::lua, "config/Test.lua");
-    Actor tester(5, 5, 10, 10, 0, 0, false, false, sf::Vector2f(0, 0), "Spaceship1");
+    Actor tester(5, 5, 5, std::vector <Square> (), false, false, sf::Vector2f(0, 0), "Spaceship1");
 	try
 	{
 		(Scripting::lua.getGlobal("someFunc"))(&tester); // print test: 123
