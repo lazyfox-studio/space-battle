@@ -77,6 +77,12 @@
     <ClCompile Include="src\Implementations\Math\Square\Square.cpp">
       <Filter>Implementations\Math\Square</Filter>
     </ClCompile>
+    <ClCompile Include="src\Implementations\VirtualDevices\VitualMouse.cpp">
+      <Filter>Implementations\VirtualDevices</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Implementations\VirtualDevices\VirtualKeyboard.cpp">
+      <Filter>Implementations\VirtualDevices</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Headers">
@@ -232,6 +238,12 @@
     <Filter Include="Implementations\Math\Square">
       <UniqueIdentifier>{756f3032-ec12-4fb4-bd36-ed354052b951}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headers\VirtualDevices">
+      <UniqueIdentifier>{14811f6e-6ef3-4346-b156-8efa18e4cf31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementations\VirtualDevices">
+      <UniqueIdentifier>{788389b7-c3f4-4144-be4a-473c4b961d86}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Headers\Scene\Level.h">
@@ -329,6 +341,12 @@
     </ClInclude>
     <ClInclude Include="src\Headers\Math\Square\Square.h">
       <Filter>Headers\Math\Square</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\VirtualDevice\VirtualKeyboard.h">
+      <Filter>Headers\VirtualDevices</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\VirtualDevice\VitualMouse.h">
+      <Filter>Headers\VirtualDevices</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

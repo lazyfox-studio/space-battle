@@ -2,6 +2,8 @@
 
 #include "../../Functions/Scripting/Scripting.h"
 #include "Actor/Pawn/Character/Character.h"
+#include "VirtualDevice/VirtualKeyboard.h"
+#include "VirtualDevice/VitualMouse.h"
 #include <map>
 #include <functional>
 
